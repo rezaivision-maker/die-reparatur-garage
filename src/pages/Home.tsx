@@ -4,6 +4,8 @@ import { ArrowRight, Settings, ShieldCheck, Wrench, Gauge, Car, Zap, Image as Im
 import { Link } from 'react-router-dom';
 import { SEO } from '../components/SEO';
 import { Reviews } from '../components/Reviews';
+import { Process } from '../components/Process';
+import { MiniFAQ } from '../components/MiniFAQ';
 
 const FeatureCard = ({ icon: Icon, title, desc }: { icon: any, title: string, desc: string }) => (
   <div className="bg-white p-8 rounded-2xl shadow-md border border-zinc-200 hover:shadow-lg transition-shadow group relative overflow-hidden">
@@ -277,8 +279,14 @@ export const Home = () => {
         </div>
       </section>
 
+      {/* 3-Step Process Section */}
+      <Process />
+
       {/* Google Reviews Section */}
       <Reviews />
+
+      {/* FAQ Section */}
+      <MiniFAQ />
 
       {/* Testimonial / CTA Split */}
       <section className="bg-brand-dark text-white">
