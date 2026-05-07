@@ -80,7 +80,15 @@ export const Home = () => {
             </h1>
             
             <p className="text-lg text-zinc-300 font-light leading-relaxed max-w-xl mb-12">
-              Willkommen in der Reparaturgarage. Bei Inhaber und <span className="text-brand-accent font-bold">KFZ-Meisterbetrieb</span> Wishnu Pranatyo bekommst du ehrliches Handwerk, transparente Preise und absolute Zuverlässigkeit.
+              {language === 'de' ? (
+                <>
+                  Willkommen in der Reparaturgarage. Bei Inhaber und <span className="text-brand-accent font-bold">KFZ-Meisterbetrieb</span> Wishnu Pranatyo bekommst du ehrliches Handwerk, transparente Preise und absolute Zuverlässigkeit.
+                </>
+              ) : (
+                <>
+                  Welcome to the Repair Garage. With owner and <span className="text-brand-accent font-bold">Master Mechanic</span> Wishnu Pranatyo, you get honest craftsmanship, transparent pricing, and absolute reliability.
+                </>
+              )}
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
