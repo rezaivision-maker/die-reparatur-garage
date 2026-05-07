@@ -1,5 +1,5 @@
 import { SEO } from '../components/SEO';
-import { MapPin, Phone, Mail, Clock, Send } from 'lucide-react';
+import { MapPin, Phone, Mail, Clock, Send, Zap } from 'lucide-react';
 import { FormEvent, useState } from 'react';
 
 export const Kontakt = () => {
