@@ -38,6 +38,16 @@ const heroImages = [
     url: "https://images.unsplash.com/photo-1619642751034-765dfdf7c162?auto=format&fit=crop&q=80&w=800",
     label: "Full Service",
     desc: "Von der Inspektion bis zur US-Umrüstung."
+  },
+  {
+    url: "https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&q=80&w=800",
+    label: "Zweirad-Service",
+    desc: "Professionelle Reparatur und Wartung für Motorräder."
+  },
+  {
+    url: "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&q=80&w=800",
+    label: "US-Car Spezialist",
+    desc: "Dein Partner für amerikanische Fahrzeugträume."
   }
 ];
 
@@ -141,6 +151,11 @@ export const Home = () => {
                     />
                     
                     <div className="absolute inset-0 bg-linear-to-t from-brand-dark/90 via-brand-dark/30 to-transparent p-10 flex flex-col justify-end">
+                       <div className="absolute top-8 left-8 z-20">
+                         <span className="px-3 py-1.5 bg-brand-accent/90 text-white text-[10px] font-bold uppercase rounded-lg backdrop-blur-md border border-white/20">
+                           Platzhalter: Hero-Slide {currentImage + 1} ({heroImages[currentImage].label})
+                         </span>
+                       </div>
                        <motion.div 
                          initial={{ y: 20, opacity: 0 }}
                          animate={{ y: 0, opacity: 1 }}
