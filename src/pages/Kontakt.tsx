@@ -7,13 +7,26 @@ export const Kontakt = () => {
   const [isSuccess, setIsSuccess] = useState(false);
 
   // We normally would plug this into Formspree or similar
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
+    
+    const formData = new FormData(e.currentTarget);
+    const name = formData.get('name');
+    const phone = formData.get('phone');
+    const topic = formData.get('topic');
+    const message = formData.get('message');
+    
+    const whatsappMessage = `Hallo Wishnu, ich habe eine Anfrage über die Website:\n\n*Name:* ${name}\n*Telefon:* ${phone}\n*Kennzeichen:* ${topic || 'Nicht angegeben'}\n*Anliegen:* ${message}`;
+    
+    const encodedMessage = encodeURIComponent(whatsappMessage);
+    const whatsappUrl = `https://wa.me/491632696960?text=${encodedMessage}`;
+    
     setTimeout(() => {
       setIsSubmitting(false);
+      window.open(whatsappUrl, '_blank');
       setIsSuccess(true);
-    }, 1500);
+    }, 1000);
   };
 
   return (
@@ -102,34 +115,35 @@ export const Kontakt = () => {
               {/* Contact Form */}
               <div className="lg:w-3/5 p-10 lg:p-14">
                  <h2 className="text-2xl font-bold text-brand-dark mb-2">Termin oder Rückruf anfragen</h2>
-                 <p className="text-zinc-500 font-normal mb-8">Hinterlasse uns eine kurze Nachricht mit deinem Anliegen. Wir melden uns schnellstmöglich bei dir.</p>
+                 <p className="text-zinc-500 font-normal mb-8">Hinterlasse uns eine kurze Nachricht mit deinem Anliegen. Wir öffnen direkt WhatsApp für dich.</p>
 
                  {isSuccess ? (
                    <div className="bg-green-50 text-green-800 p-6 rounded-xl border border-green-200">
-                     <h3 className="font-bold mb-2 text-lg">Danke für deine Nachricht!</h3>
-                     <p className="font-normal">Wir haben deine Anfrage erhalten und werden uns in Kürze telefonisch oder per E-Mail bei dir melden.</p>
+                     <h3 className="font-bold mb-2 text-lg">WhatsApp wird geöffnet...</h3>
+                     <p className="font-normal">Sollte sich WhatsApp nicht automatisch öffnen, klicke bitte erneut auf den Button.</p>
+                     <button onClick={() => setIsSuccess(false)} className="mt-4 text-brand-accent font-bold underline">Zurück zum Formular</button>
                    </div>
                  ) : (
-                   <form action="https://formspree.io/f/placeholder" method="POST" onSubmit={handleSubmit} className="space-y-6">
+                   <form onSubmit={handleSubmit} className="space-y-6">
                      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                        <div>
                          <label htmlFor="name" className="block text-xs font-bold uppercase tracking-widest text-zinc-500 mb-2">Name</label>
-                         <input type="text" id="name" required className="w-full bg-zinc-50 border border-zinc-200 px-4 py-3 rounded-lg focus:outline-none focus:border-brand-accent focus:bg-white transition-colors" />
+                         <input type="text" id="name" name="name" required className="w-full bg-zinc-50 border border-zinc-200 px-4 py-3 rounded-lg focus:outline-none focus:border-brand-accent focus:bg-white transition-colors" />
                        </div>
                        <div>
                          <label htmlFor="phone" className="block text-xs font-bold uppercase tracking-widest text-zinc-500 mb-2">Telefonnummer</label>
-                         <input type="tel" id="phone" required className="w-full bg-zinc-50 border border-zinc-200 px-4 py-3 rounded-lg focus:outline-none focus:border-brand-accent focus:bg-white transition-colors" />
+                         <input type="tel" id="phone" name="phone" required className="w-full bg-zinc-50 border border-zinc-200 px-4 py-3 rounded-lg focus:outline-none focus:border-brand-accent focus:bg-white transition-colors" />
                        </div>
                      </div>
                      
                      <div>
                        <label htmlFor="topic" className="block text-xs font-bold uppercase tracking-widest text-zinc-500 mb-2">KFZ-Kennzeichen (optional)</label>
-                       <input type="text" id="topic" className="w-full bg-zinc-50 border border-zinc-200 px-4 py-3 rounded-lg focus:outline-none focus:border-brand-accent focus:bg-white transition-colors" placeholder="z.B. KL-AB 123" />
+                       <input type="text" id="topic" name="topic" className="w-full bg-zinc-50 border border-zinc-200 px-4 py-3 rounded-lg focus:outline-none focus:border-brand-accent focus:bg-white transition-colors" placeholder="z.B. KL-AB 123" />
                      </div>
 
                      <div>
                        <label htmlFor="message" className="block text-xs font-bold uppercase tracking-widest text-zinc-500 mb-2">Dein Anliegen</label>
-                       <textarea id="message" rows={4} required className="w-full bg-zinc-50 border border-zinc-200 px-4 py-3 rounded-lg focus:outline-none focus:border-brand-accent focus:bg-white transition-colors" placeholder="Was können wir für dich tun?"></textarea>
+                       <textarea id="message" name="message" rows={4} required className="w-full bg-zinc-50 border border-zinc-200 px-4 py-3 rounded-lg focus:outline-none focus:border-brand-accent focus:bg-white transition-colors" placeholder="Was können wir für dich tun?"></textarea>
                      </div>
 
                      <button 
@@ -137,8 +151,8 @@ export const Kontakt = () => {
                        disabled={isSubmitting}
                        className="w-full bg-brand-accent text-white font-bold py-4 rounded-lg flex items-center justify-center gap-2 hover:bg-orange-600 transition-colors disabled:opacity-70"
                      >
-                       {isSubmitting ? 'Wird gesendet...' : (
-                         <>Nachricht senden <Send className="w-4 h-4" /></>
+                       {isSubmitting ? 'Wird vorbereitet...' : (
+                         <>Anfrage via WhatsApp senden <Zap className="w-4 h-4 text-white" /></>
                        )}
                      </button>
                    </form>
