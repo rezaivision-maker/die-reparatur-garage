@@ -11,7 +11,7 @@ export const MiniFAQ = () => {
     <section className="py-24 bg-white">
       <div className="max-w-4xl mx-auto px-6">
         <div className="text-center mb-16">
-          <span className="text-brand-accent font-bold tracking-widest uppercase text-xs mb-4 block">{t.faq.tag}</span>
+          <span className="text-brand-accent tracking-[0.3em] uppercase text-sm mb-4 block font-heading">{t.faq.tag}</span>
           <h2 className="text-4xl font-normal text-brand-dark mb-4 font-display">{t.faq.title}</h2>
           <p className="text-zinc-600">{t.faq.subtitle}</p>
         </div>

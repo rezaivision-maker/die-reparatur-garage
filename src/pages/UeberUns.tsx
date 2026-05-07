@@ -16,7 +16,7 @@ export const UeberUns = () => {
       <div className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div>
-            <span className="text-brand-accent font-bold tracking-widest uppercase text-xs mb-4 block">{t.about.tag}</span>
+            <span className="text-brand-accent tracking-[0.3em] uppercase text-sm mb-4 block font-heading">{t.about.tag}</span>
             <h1 className="text-6xl lg:text-8xl font-normal tracking-wide mb-8 text-brand-dark font-heading uppercase leading-[1]">
               {t.about.title} <br /> <span className="text-brand-accent">{t.about.italic}</span>
             </h1>

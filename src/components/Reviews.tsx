@@ -43,7 +43,7 @@ export const Reviews = () => {
             className="inline-flex items-center gap-2 px-3 py-1 bg-white rounded-full border border-zinc-200 mb-4"
           >
             <Star className="w-4 h-4 text-brand-accent fill-brand-accent" />
-            <span className="text-xs font-bold uppercase tracking-widest text-brand-dark">{t.reviews.tag}</span>
+            <span className="text-sm tracking-[0.3em] uppercase text-brand-dark font-heading">{t.reviews.tag}</span>
           </motion.div>
           <h2 className="text-4xl font-normal text-brand-dark mb-4 font-display">{t.reviews.title}</h2>
           <p className="text-zinc-600 max-w-2xl mx-auto">

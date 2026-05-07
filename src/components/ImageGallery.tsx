@@ -38,7 +38,7 @@ export const ImageGallery = () => {
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
           <div>
-            <span className="text-brand-accent font-bold tracking-widest uppercase text-xs mb-4 block">Einblicke</span>
+            <span className="text-brand-accent tracking-[0.3em] uppercase text-sm mb-4 block font-heading">Einblicke</span>
             <h2 className="text-4xl font-normal text-brand-dark mb-4 font-display">Unsere Werkstatt</h2>
             <p className="text-zinc-600 max-w-xl">
               Modernstes Equipment trifft auf echtes Handwerk. Ein Blick hinter die Kulissen unserer täglichen Arbeit.

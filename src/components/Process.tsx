@@ -15,7 +15,7 @@ export const Process = () => {
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="text-center mb-16">
-          <span className="text-brand-accent font-bold tracking-widest uppercase text-xs mb-4 block">{t.process.tag}</span>
+          <span className="text-brand-accent tracking-[0.3em] uppercase text-sm mb-4 block font-heading">{t.process.tag}</span>
           <h2 className="text-4xl lg:text-5xl mb-4 font-display">{t.process.title}</h2>
           <p className="text-zinc-400 max-w-2xl mx-auto">
             {t.process.subtitle}

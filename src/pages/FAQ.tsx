@@ -37,7 +37,7 @@ export const FAQ = () => {
       <div className="py-24 bg-brand-gray min-h-[80vh]">
         <div className="max-w-3xl mx-auto px-6">
           <div className="text-center mb-16">
-            <span className="text-brand-accent font-bold tracking-widest uppercase text-xs mb-4 block">Häufige Fragen</span>
+            <span className="text-brand-accent tracking-[0.3em] uppercase text-sm mb-4 block font-heading">Häufige Fragen</span>
             <h1 className="text-5xl lg:text-7xl font-normal tracking-wide text-brand-dark mb-4 font-heading uppercase leading-[1]">
               Gut zu wissen.
             </h1>

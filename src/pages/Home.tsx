@@ -232,7 +232,7 @@ export const Home = () => {
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
            <div>
-              <span className="text-brand-accent font-bold tracking-widest uppercase text-xs mb-4 block">{t.garage.tag}</span>
+              <span className="text-brand-accent tracking-[0.3em] uppercase text-sm mb-4 block font-heading">{t.garage.tag}</span>
               <h2 className="text-3xl lg:text-4xl font-normal tracking-tight mb-8 text-brand-dark font-display leading-tight">
                 {t.garage.title.split('.')[0]}. <br /> 
                 <span className="text-brand-accent block sm:inline">{t.garage.title.split('.')[1]}</span>

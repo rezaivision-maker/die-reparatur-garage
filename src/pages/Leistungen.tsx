@@ -35,7 +35,7 @@ export const Leistungen = () => {
       <div className="bg-brand-dark text-white py-24 pb-32 relative overflow-hidden">
         <div className="absolute inset-0 bg-linear-to-b from-transparent to-brand-dark/95 z-0" />
         <div className="max-w-7xl mx-auto px-6 relative z-10">
-          <span className="text-brand-accent font-bold tracking-widest uppercase text-xs mb-4 block">{t.services.tag}</span>
+          <span className="text-brand-accent tracking-[0.3em] uppercase text-sm mb-4 block font-heading">{t.services.tag}</span>
           <h1 className="text-6xl lg:text-8xl font-normal tracking-wide mb-8 font-heading uppercase leading-[1]">
             {t.services.title} <span className="text-brand-accent">{t.services.italic}</span>
           </h1>
