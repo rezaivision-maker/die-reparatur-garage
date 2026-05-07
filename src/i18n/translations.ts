@@ -27,7 +27,9 @@ export const translations = {
       slides: [
         { label: "Meisterqualität", desc: "Modernste Technik & jahrelange Erfahrung" },
         { label: "Präzision", desc: "Exakte Diagnose für maximale Sicherheit" },
-        { label: "Handwerk", desc: "Sorgfalt bei jedem Handgriff" }
+        { label: "Handwerk", desc: "Sorgfalt bei jedem Handgriff" },
+        { label: "Zweirad-Service", desc: "Professionelle Wartung & Reparatur" },
+        { label: "US-Car Spezialist", desc: "Dein Partner für amerikanische Träume" }
       ]
     },
     garage: {
@@ -184,7 +186,9 @@ export const translations = {
       slides: [
         { label: "Master Quality", desc: "State-of-the-art tech & years of experience" },
         { label: "Precision", desc: "Exact diagnostics for maximum safety" },
-        { label: "Craftsmanship", desc: "Care in every single movement" }
+        { label: "Craftsmanship", desc: "Care in every single movement" },
+        { label: "Motorcycle Service", desc: "Professional maintenance & repair" },
+        { label: "US-Car Specialist", desc: "Your partner for American dreams" }
       ]
     },
     garage: {

@@ -27,7 +27,9 @@ const FeatureCard = ({ icon: Icon, title, desc }: { icon: any, title: string, de
 const heroImages = [
   { url: "/images/hero-3.png" },
   { url: "/images/hero-1.png" },
-  { url: "/images/hero-2.png" }
+  { url: "/images/hero-2.png" },
+  { url: "/images/hero-4.png" },
+  { url: "/images/hero-5.png" }
 ];
 
 export const Home = () => {
