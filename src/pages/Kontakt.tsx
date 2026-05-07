@@ -111,6 +111,7 @@ export const Kontakt = () => {
                     </div>
                  </div>
               </div>
+           </div>
 
               {/* Contact Form */}
               <div className="lg:w-3/5 p-10 lg:p-14">
