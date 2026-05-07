@@ -67,90 +67,61 @@ export const Home = () => {
           <div className="absolute inset-0 bg-linear-to-t from-brand-dark via-transparent to-transparent" />
         </div>
         
-        <div className="max-w-7xl mx-auto px-6 relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-stretch">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+        <div className="max-w-7xl mx-auto px-6 relative z-10 grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr] gap-16 lg:gap-24 items-stretch">
+          {/* Left Content - Now with more space */}
+          <motion.div 
+            initial={{ opacity: 0, x: -30 }}
+            animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
+            className="flex flex-col justify-center py-12 lg:py-20"
           >
-            <div className="inline-flex items-center gap-2 px-3 py-1 bg-white/10 rounded-full border border-white/20 mb-8 backdrop-blur-sm">
-              <span className="flex w-2 h-2 rounded-full bg-brand-accent animate-pulse" />
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-accent/10 border border-brand-accent/20 text-brand-accent mb-6 w-max">
+              <ShieldCheck className="w-4 h-4" />
               <span className="text-xs font-bold tracking-widest uppercase">{t.hero.badge}</span>
             </div>
             
-            <h1 className="text-6xl lg:text-8xl font-normal tracking-wide mb-8 leading-[1] font-heading uppercase">
+            <h1 className="text-6xl lg:text-[5.5rem] font-normal tracking-wide mb-8 leading-[0.95] font-heading uppercase">
               {t.hero.title1} <span className="text-brand-accent">{t.hero.title2}</span> <br /> {t.hero.title3}
             </h1>
             
             <p className="text-lg text-zinc-300 font-light leading-relaxed max-w-xl mb-12">
-              {language === 'de' ? (
-                <>
-                  Willkommen in der Reparaturgarage. Bei Inhaber und <span className="text-brand-accent font-bold">KFZ-Meisterbetrieb</span> Wishnu Pranatyo bekommst du ehrliches Handwerk, transparente Preise und absolute Zuverlässigkeit.
-                </>
-              ) : (
-                <>
-                  Welcome to the Repair Garage. With owner and <span className="text-brand-accent font-bold">Master Mechanic</span> Wishnu Pranatyo, you get honest craftsmanship, transparent pricing, and absolute reliability.
-                </>
-              )}
+              {t.hero.subtitle}
             </p>
-
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Link to="/kontakt" className="px-8 py-4 bg-brand-accent text-white font-bold text-center rounded-lg hover:bg-orange-600 transition-colors shadow-lg shadow-brand-accent/20 flex items-center justify-center gap-2">
-                {t.hero.cta1} <ArrowRight className="w-5 h-5" />
+            
+            <div className="flex flex-col sm:flex-row gap-5 mb-16">
+              <Link to="/kontakt" className="px-10 py-5 bg-brand-accent text-white font-bold rounded-xl hover:bg-orange-600 transition-all shadow-xl shadow-brand-accent/30 flex items-center justify-center gap-2 group">
+                {t.hero.ctaPrimary} <Zap className="w-4 h-4 group-hover:scale-125 transition-transform" />
               </Link>
-              <Link to="/leistungen" className="px-8 py-4 bg-white/5 border border-white/20 text-white font-bold text-center rounded-lg hover:bg-white/10 transition-colors backdrop-blur-sm">
-                {t.hero.cta2}
+              <Link to="/leistungen" className="px-10 py-5 bg-white/5 backdrop-blur-sm border border-white/10 text-white font-bold rounded-xl hover:bg-white/10 transition-all flex items-center justify-center gap-2">
+                {t.hero.ctaSecondary} <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
-            
-            {/* Trust Indicators */}
-            <div className="mt-16 flex flex-wrap items-center gap-8 border-t border-white/10 pt-8">
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-brand-accent/20 rounded-full flex items-center justify-center">
-                  <ShieldCheck className="w-5 h-5 text-brand-accent" />
-                </div>
-                <div>
-                  <p className="text-lg font-black text-white leading-none">{t.hero.stats.expertise.split(' ')[t.hero.stats.expertise.split(' ').length - 1]}</p>
-                  <p className="text-[10px] text-zinc-400 uppercase tracking-widest mt-1">
-                    {t.hero.stats.expertise.replace(t.hero.stats.expertise.split(' ')[t.hero.stats.expertise.split(' ').length - 1], '').trim()}
-                  </p>
-                </div>
-              </div>
 
-              <div className="hidden sm:block w-[1px] h-10 bg-white/10" />
-
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-brand-accent/20 rounded-full flex items-center justify-center">
-                  <Wrench className="w-5 h-5 text-brand-accent" />
-                </div>
-                <div>
-                  <p className="text-lg font-black text-white leading-none">{t.hero.stats.loyalty.split(' ')[t.hero.stats.loyalty.split(' ').length - 1]}</p>
-                  <p className="text-[10px] text-zinc-400 uppercase tracking-widest mt-1">
-                    {t.hero.stats.loyalty.replace(t.hero.stats.loyalty.split(' ')[t.hero.stats.loyalty.split(' ').length - 1], '').trim()}
-                  </p>
-                </div>
-              </div>
-
-              <div className="hidden sm:block w-[1px] h-10 bg-white/10" />
-
+            {/* Stats / Trust Signals */}
+            <div className="grid grid-cols-3 gap-8 pt-8 border-t border-white/5">
               <div>
-                <div className="flex gap-0.5 mb-1">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 text-brand-accent fill-brand-accent" />
-                  ))}
-                </div>
-                <p className="text-[10px] text-zinc-400 uppercase tracking-widest">{t.hero.stats.rating}</p>
+                <p className="text-3xl font-black text-white font-heading uppercase mb-1">2011</p>
+                <p className="text-[10px] text-zinc-400 font-bold uppercase tracking-widest leading-tight">{language === 'de' ? 'Meister seit' : 'Master since'}</p>
+              </div>
+              <div>
+                <p className="text-3xl font-black text-white font-heading uppercase mb-1">2017</p>
+                <p className="text-[10px] text-zinc-400 font-bold uppercase tracking-widest leading-tight">{language === 'de' ? 'Eigene Werkstatt' : 'Own Garage'}</p>
+              </div>
+              <div>
+                <p className="text-3xl font-black text-white font-heading uppercase mb-1">100%</p>
+                <p className="text-[10px] text-zinc-400 font-bold uppercase tracking-widest leading-tight">{language === 'de' ? 'Leidenschaft' : 'Passion'}</p>
               </div>
             </div>
           </motion.div>
-          
+
+          {/* Right Slider - Compact and elegant */}
           <motion.div 
-             initial={{ opacity: 0, x: 20 }}
-             animate={{ opacity: 1, x: 0 }}
+             initial={{ opacity: 0, scale: 0.95 }}
+             animate={{ opacity: 1, scale: 1 }}
              transition={{ duration: 1, delay: 0.2 }}
-             className="hidden lg:block relative self-stretch"
+             className="hidden lg:block relative self-center"
           >
-             <div className="w-full h-full rounded-[2rem] overflow-hidden border-8 border-brand-dark shadow-2xl relative z-10 bg-zinc-800 group">
+             <div className="w-full aspect-[4/5] rounded-[2.5rem] overflow-hidden border-4 border-white/10 shadow-3xl relative z-10 bg-zinc-800 group">
                 <AnimatePresence mode="popLayout" initial={false}>
                   <motion.div
                     key={currentImage}
