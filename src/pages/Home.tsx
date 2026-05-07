@@ -248,23 +248,29 @@ export const Home = () => {
            </div>
            <div className="relative">
               <div className="grid grid-cols-2 gap-4">
-                 <div className="rounded-2xl w-full h-64 mt-10 overflow-hidden bg-zinc-100 border border-zinc-200 relative group flex items-center justify-center">
+                 <div className="col-span-2 rounded-2xl w-full h-72 overflow-hidden bg-zinc-100 border border-zinc-200 relative group flex items-center justify-center">
+                    {/* PLACEHOLDER: WERKSTATT AUSSENANSICHT */}
+                    <div className="absolute inset-0 flex flex-col items-center justify-center text-zinc-400 z-10 p-6 text-center group-hover:bg-zinc-800 group-hover:text-white transition-colors">
+                      <ImageIcon className="w-8 h-8 mb-2 opacity-50" />
+                      <span className="text-xs font-bold uppercase tracking-wider">Werkstatt Außenansicht</span>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&q=80&w=1200" alt="Werkstatt Außen" className="absolute inset-0 w-full h-full object-cover opacity-30 group-hover:opacity-10 transition-opacity" />
+                 </div>
+                 <div className="rounded-2xl w-full h-56 overflow-hidden bg-zinc-100 border border-zinc-200 relative group flex items-center justify-center">
                     {/* PLACEHOLDER: WERKSTATT INNENANSICHT */}
                     <div className="absolute inset-0 flex flex-col items-center justify-center text-zinc-400 z-10 p-6 text-center group-hover:bg-zinc-800 group-hover:text-white transition-colors">
-                      <ImageIcon className="w-8 h-8 mb-2 opacity-50" />
-                      <span className="text-xs font-bold uppercase tracking-wider">Werkstatt Innenansicht</span>
+                      <ImageIcon className="w-6 h-6 mb-2 opacity-50" />
+                      <span className="text-xs font-bold uppercase tracking-wider text-[10px]">Innenansicht</span>
                     </div>
-                    {/* Optional: Add image src here later */}
-                    <img src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&q=80&w=600" alt="Werkstatt 1" className="absolute inset-0 w-full h-full object-cover opacity-30 group-hover:opacity-10 transition-opacity" />
+                    <img src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&q=80&w=600" alt="Werkstatt Innen" className="absolute inset-0 w-full h-full object-cover opacity-30 group-hover:opacity-10 transition-opacity" />
                  </div>
-                 <div className="rounded-2xl w-full h-64 overflow-hidden bg-zinc-100 border border-zinc-200 relative group flex items-center justify-center">
+                 <div className="rounded-2xl w-full h-56 overflow-hidden bg-zinc-100 border border-zinc-200 relative group flex items-center justify-center">
                     {/* PLACEHOLDER: TEAM / WISHNU */}
                     <div className="absolute inset-0 flex flex-col items-center justify-center text-zinc-400 z-10 p-6 text-center group-hover:bg-zinc-800 group-hover:text-white transition-colors">
-                      <ImageIcon className="w-8 h-8 mb-2 opacity-50" />
-                      <span className="text-xs font-bold uppercase tracking-wider">Bild von Wishnu / Team</span>
+                      <ImageIcon className="w-6 h-6 mb-2 opacity-50" />
+                      <span className="text-xs font-bold uppercase tracking-wider text-[10px]">Der Meister bei der Arbeit</span>
                     </div>
-                    {/* Optional: Add image src here later */}
-                    <img src="https://images.unsplash.com/photo-1544641113-f9d22fa97950?auto=format&fit=crop&q=80&w=600" alt="Werkstatt 2" className="absolute inset-0 w-full h-full object-cover opacity-30 group-hover:opacity-10 transition-opacity" />
+                    <img src="https://images.unsplash.com/photo-1544641113-f9d22fa97950?auto=format&fit=crop&q=80&w=600" alt="Team" className="absolute inset-0 w-full h-full object-cover opacity-30 group-hover:opacity-10 transition-opacity" />
                  </div>
               </div>
            </div>
