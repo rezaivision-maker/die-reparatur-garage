@@ -1,5 +1,6 @@
 import { SEO } from '../components/SEO';
 import { Target, Heart, Wrench } from 'lucide-react';
+import { ImageGallery } from '../components/ImageGallery';
 
 export const UeberUns = () => {
   return (
@@ -69,6 +70,8 @@ export const UeberUns = () => {
            </div>
         </div>
       </div>
+
+      <ImageGallery />
     </>
   );
 };

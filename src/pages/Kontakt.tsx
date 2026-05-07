@@ -42,8 +42,17 @@ export const Kontakt = () => {
         <div className="max-w-7xl mx-auto px-6 -mt-16 relative z-10">
            <div className="bg-white rounded-3xl shadow-xl overflow-hidden flex flex-col lg:flex-row">
               {/* Contact Info */}
-              <div className="lg:w-2/5 bg-zinc-50 p-10 lg:p-14 border-r border-zinc-100">
-                 <h2 className="text-3xl font-bold text-brand-dark mb-8">Lass uns reden.</h2>
+              <div className="lg:w-2/5 bg-zinc-50 border-r border-zinc-100 flex flex-col">
+                 <div className="h-48 w-full relative group overflow-hidden">
+                   <img 
+                     src="https://images.unsplash.com/photo-1599256872237-5dcc0fbe9668?auto=format&fit=crop&q=80&w=800" 
+                     alt="Werkstatt Außen" 
+                     className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                   />
+                   <div className="absolute inset-0 bg-black/20" />
+                 </div>
+                 <div className="p-10 lg:p-14 flex-1">
+                   <h2 className="text-3xl font-bold text-brand-dark mb-8">Lass uns reden.</h2>
                  
                  <div className="space-y-8">
                     <div className="flex items-start gap-4">

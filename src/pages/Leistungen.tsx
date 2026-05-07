@@ -1,6 +1,7 @@
 import { SEO } from '../components/SEO';
 import { Wrench, Gauge, Car, ShieldCheck, Zap, Bike } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { VideoPlaceholder } from '../components/VideoPlaceholder';
 
 const ServiceItem = ({ icon: Icon, title, desc }: { icon: any, title: string, desc: string }) => (
   <div className="flex gap-6 p-8 bg-white rounded-2xl border border-zinc-200 shadow-md transition-all hover:shadow-lg hover:border-brand-accent/30 relative overflow-hidden group">
@@ -72,6 +73,8 @@ export const Leistungen = () => {
              desc="Als passionierte Motorradfahrer bieten wir auch einen umfassenden Service für Zweiräder an. Vom Reifenwechsel bis zur Vergaser-Synchronisation – Maschinen sind bei uns in besten Händen."
            />
         </div>
+
+        <VideoPlaceholder />
 
         <div className="mt-16 bg-brand-accent rounded-2xl p-10 lg:p-16 text-center text-white relative overflow-hidden shadow-xl shadow-brand-accent/20">
           <div className="absolute inset-0 bg-black/10" />
