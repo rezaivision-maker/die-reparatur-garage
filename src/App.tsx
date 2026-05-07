@@ -13,6 +13,10 @@ export default function App() {
   return (
     <BrowserRouter>
       <div className="flex flex-col min-h-screen bg-brand-gray text-brand-dark font-sans">
+        {/* DEBUG MARKER - PLEASE REMOVE AFTER VERIFICATION */}
+        <div className="bg-red-600 text-white text-[10px] py-1 text-center font-bold z-[9999] relative">
+          LIVE-VERSION: V2.5 (RESPONSIVE FIX) - {new Date().toLocaleTimeString()}
+        </div>
         <Navigation />
         <main className="flex-1">
           <Routes>

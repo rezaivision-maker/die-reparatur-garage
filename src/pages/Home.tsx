@@ -7,6 +7,7 @@ import { Reviews } from '../components/Reviews';
 import { Process } from '../components/Process';
 import { MiniFAQ } from '../components/MiniFAQ';
 import { ImageGallery } from '../components/ImageGallery';
+import { useTranslation } from '../i18n/LanguageContext';
 
 const FeatureCard = ({ icon: Icon, title, desc }: { icon: any, title: string, desc: string }) => (
   <div className="bg-white p-8 rounded-2xl shadow-md border border-zinc-200 hover:shadow-lg transition-shadow group relative overflow-hidden">
@@ -52,6 +53,7 @@ const heroImages = [
 ];
 
 export const Home = () => {
+  const { language, t } = useTranslation();
   const [currentImage, setCurrentImage] = useState(0);
 
   useEffect(() => {
@@ -59,7 +61,7 @@ export const Home = () => {
       setCurrentImage((prev) => (prev + 1) % heroImages.length);
     }, 6000);
     return () => clearInterval(timer);
-  }, [currentImage]); // Restart timer on manual change
+  }, [currentImage]);
 
   const nextSlide = () => setCurrentImage((prev) => (prev + 1) % heroImages.length);
   const prevSlide = () => setCurrentImage((prev) => (prev - 1 + heroImages.length) % heroImages.length);
@@ -67,15 +69,22 @@ export const Home = () => {
   return (
     <>
       <SEO 
-        title="KFZ Meisterwerkstatt in Enkenbach-Alsenborn | Kaiserslautern & Region" 
-        description="Die Reparaturgarage: Deine ehrliche Autowerkstatt für Enkenbach-Alsenborn, Kaiserslautern, Mehlingen & Sembach. Günstige Autoreparatur, Inspektion & US-Car Umrüstung vom KFZ-Meister." 
+        title={t.hero.badge} 
+        description={t.hero.subtitle} 
         canonical="/" 
       />
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-brand-dark text-white pt-12 pb-32 lg:py-40">
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1619642751034-765dfdf7c162?auto=format&fit=crop&q=80&w=2600')] bg-cover bg-center opacity-10 mix-blend-overlay" />
-        <div className="absolute inset-0 bg-linear-to-r from-brand-dark via-brand-dark/95 to-transparent" />
+      <section className="relative overflow-hidden bg-brand-dark text-white pt-12 pb-32 lg:py-40 min-h-[80vh] flex items-center">
+        <div className="absolute inset-0 z-0">
+          <img 
+            src="/hero_garage_background_1778156355035.png" 
+            alt="Die Reparatur Garage" 
+            className="w-full h-full object-cover opacity-30"
+          />
+          <div className="absolute inset-0 bg-linear-to-r from-brand-dark via-brand-dark/80 to-transparent" />
+          <div className="absolute inset-0 bg-linear-to-t from-brand-dark via-transparent to-transparent" />
+        </div>
         
         <div className="max-w-7xl mx-auto px-6 relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <motion.div
@@ -85,23 +94,23 @@ export const Home = () => {
           >
             <div className="inline-flex items-center gap-2 px-3 py-1 bg-white/10 rounded-full border border-white/20 mb-8 backdrop-blur-sm">
               <span className="flex w-2 h-2 rounded-full bg-brand-accent animate-pulse" />
-              <span className="text-xs font-bold tracking-widest uppercase">KFZ Meisterbetrieb Enkenbach-Alsenborn • Kaiserslautern • Sembach</span>
+              <span className="text-xs font-bold tracking-widest uppercase">{t.hero.badge}</span>
             </div>
             
             <h1 className="text-5xl lg:text-7xl font-bold tracking-tight mb-8 leading-[1.1]">
-              Meisterhafter <span className="text-brand-accent italic">Service.</span> <br /> Ohne Kompromisse.
+              {t.hero.title1} <span className="text-brand-accent italic">{t.hero.title2}</span> <br /> {t.hero.title3}
             </h1>
             
             <p className="text-lg text-zinc-300 font-light leading-relaxed max-w-xl mb-12">
-              Willkommen in der Reparaturgarage. Bei Inhaber und KFZ-Meister Wishnu Pranatyo bekommst du ehrliches Handwerk, transparente Preise und absolute Zuverlässigkeit. Die preiswerte Autowerkstatt für die Region Kaiserslautern, Mehlingen und Enkenbach.
+              Willkommen in der Reparaturgarage. Bei Inhaber und <span className="text-brand-accent font-bold">KFZ-Meisterbetrieb</span> Wishnu Pranatyo bekommst du ehrliches Handwerk, transparente Preise und absolute Zuverlässigkeit.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
               <Link to="/kontakt" className="px-8 py-4 bg-brand-accent text-white font-bold text-center rounded-lg hover:bg-orange-600 transition-colors shadow-lg shadow-brand-accent/20 flex items-center justify-center gap-2">
-                Termin vereinbaren <ArrowRight className="w-5 h-5" />
+                {t.hero.cta1} <ArrowRight className="w-5 h-5" />
               </Link>
               <Link to="/leistungen" className="px-8 py-4 bg-white/5 border border-white/20 text-white font-bold text-center rounded-lg hover:bg-white/10 transition-colors backdrop-blur-sm">
-                Unsere Leistungen
+                {t.hero.cta2}
               </Link>
             </div>
             
@@ -109,12 +118,12 @@ export const Home = () => {
             <div className="mt-16 flex items-center gap-8 border-t border-white/10 pt-8">
               <div>
                 <p className="text-3xl font-black text-white">15+</p>
-                <p className="text-xs text-zinc-400 uppercase tracking-widest mt-1">Jahre Expertise</p>
+                <p className="text-xs text-zinc-400 uppercase tracking-widest mt-1">{t.hero.stats.expertise}</p>
               </div>
               <div className="w-[1px] h-10 bg-white/10" />
               <div>
                 <p className="text-3xl font-black text-white">100%</p>
-                <p className="text-xs text-zinc-400 uppercase tracking-widest mt-1">Stammkunden Quote</p>
+                <p className="text-xs text-zinc-400 uppercase tracking-widest mt-1">{t.hero.stats.loyalty}</p>
               </div>
               <div className="w-[1px] h-10 bg-white/10" />
               <div>
@@ -123,7 +132,7 @@ export const Home = () => {
                     <Star key={i} className="w-4 h-4 text-brand-accent fill-brand-accent" />
                   ))}
                 </div>
-                <p className="text-xs text-zinc-400 uppercase tracking-widest">5.0 Google Rating</p>
+                <p className="text-xs text-zinc-400 uppercase tracking-widest">{t.hero.stats.rating}</p>
               </div>
             </div>
           </motion.div>
@@ -153,7 +162,7 @@ export const Home = () => {
                     <div className="absolute inset-0 bg-linear-to-t from-brand-dark/90 via-brand-dark/30 to-transparent p-10 flex flex-col justify-end">
                        <div className="absolute top-8 left-8 z-20">
                          <span className="px-3 py-1.5 bg-brand-accent/90 text-white text-[10px] font-bold uppercase rounded-lg backdrop-blur-md border border-white/20">
-                           Platzhalter: Hero-Slide {currentImage + 1} ({heroImages[currentImage].label})
+                           {language === 'de' ? 'Platzhalter' : 'Placeholder'}: Hero-Slide {currentImage + 1} ({heroImages[currentImage].label})
                          </span>
                        </div>
                        <motion.div 
@@ -216,23 +225,23 @@ export const Home = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
              <FeatureCard 
                icon={Wrench} 
-               title="Reparaturen" 
-               desc="Fachgerechte Instandsetzung aller Marken. Von Bremsen bis zum Fahrwerk – wir machen dein Auto fit." 
+               title={language === 'de' ? 'Reparaturen' : 'Repairs'} 
+               desc={language === 'de' ? 'Fachgerechte Instandsetzung aller Marken. Von Bremsen bis zum Fahrwerk – wir machen dein Auto fit.' : 'Professional repair of all brands. From brakes to suspension – we get your car ready.'} 
              />
              <FeatureCard 
                icon={Gauge} 
-               title="Inspektion" 
-               desc="Wartung exakt nach Herstellervorgaben, damit auch im Garantiefall alles reibungslos bleibt." 
+               title={language === 'de' ? 'Inspektion' : 'Inspection'} 
+               desc={language === 'de' ? 'Wartung exakt nach Herstellervorgaben, damit auch im Garantiefall alles reibungslos bleibt.' : 'Maintenance exactly according to manufacturer specs, ensuring everything stays smooth even for warranty cases.'} 
              />
              <FeatureCard 
                icon={Car} 
-               title="US-Fahrzeuge" 
-               desc="Professionelle Umrüstung von US-Importen für den europäischen Markt inkl. aller notwendigen Gutachten." 
+               title={language === 'de' ? 'US-Fahrzeuge' : 'US Vehicles'} 
+               desc={language === 'de' ? 'Professionelle Umrüstung von US-Importen für den europäischen Markt inkl. aller notwendigen Gutachten.' : 'Professional conversion of US imports for the European market including all necessary certificates.'} 
              />
              <FeatureCard 
                icon={Settings} 
-               title="Diagnostik" 
-               desc="Fehlerspeicher auslesen und modernste Fehlerdiagnose, bevor wir auf gut Glück Teile tauschen." 
+               title={language === 'de' ? 'Diagnostik' : 'Diagnostics'} 
+               desc={language === 'de' ? 'Fehlerspeicher auslesen und modernste Fehlerdiagnose, bevor wir auf gut Glück Teile tauschen.' : 'Reading fault memory and state-of-the-art diagnostics before we swap parts on a hunch.'} 
              />
           </div>
         </div>
@@ -242,25 +251,16 @@ export const Home = () => {
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
            <div>
-              <span className="text-brand-accent font-bold tracking-widest uppercase text-xs mb-4 block">Die Garage</span>
+              <span className="text-brand-accent font-bold tracking-widest uppercase text-xs mb-4 block">{t.garage.tag}</span>
               <h2 className="text-4xl lg:text-5xl font-bold tracking-tight mb-8 text-brand-dark">
-                Dein Auto. <br /> In Meisterhand.
+                {t.garage.title.split('.')[0]}. <br /> {t.garage.title.split('.')[1]}
               </h2>
               <div className="space-y-6 text-zinc-700 font-normal text-lg leading-relaxed">
-                <p>
-                  Wir sind keine unpersönliche Kette, bei der du nur eine Nummer bist. Die Reparaturgarage ist ein inhabergeführter **KFZ-Meisterbetrieb** im Herzen von Enkenbach-Alsenborn. Wenn du im Umkreis von Kaiserslautern, Mehlingen oder Sembach dein Auto günstig und fachgerecht reparieren lassen möchtest, sprichst du bei uns direkt mit dem Chef.
-                </p>
-                <p>
-                  Wishnu Pranatyo und sein Team reparieren nicht nur, sondern suchen immer nach der sinnvollsten und preiswertesten Lösung für dein Fahrzeug. Keine versteckten Kosten, keine unnötigen Reparaturen – nur ehrliche Arbeit als deine Fachwerkstatt für PKW und Zweiräder.
-                </p>
+                <p>{t.garage.p1}</p>
+                <p>{t.garage.p2}</p>
               </div>
               <ul className="mt-8 space-y-4">
-                 {[
-                   'Persönliche Beratung vom KFZ-Meister',
-                   'Transparente Kostenvoranschläge',
-                   'Modernste Diagnose-Werkzeuge',
-                   'Spezialisiert auf KFZ & Zweiräder'
-                 ].map((item, i) => (
+                 {t.garage.features.map((item: string, i: number) => (
                    <li key={i} className="flex items-center gap-3 text-brand-dark font-bold">
                      <ShieldCheck className="w-5 h-5 text-brand-accent shrink-0" />
                      {item}
@@ -269,7 +269,7 @@ export const Home = () => {
               </ul>
               <div className="mt-10">
                 <Link to="/ueber-uns" className="text-brand-accent font-bold inline-flex items-center gap-2 hover:text-orange-600 transition-colors">
-                  Mehr über uns erfahren <ArrowRight className="w-4 h-4" />
+                  {t.garage.more} <ArrowRight className="w-4 h-4" />
                 </Link>
               </div>
            </div>
@@ -280,7 +280,7 @@ export const Home = () => {
                     <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&q=80&w=1200" alt="Werkstatt Außenansicht" loading="lazy" className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
                     <div className="absolute top-4 left-4 z-20">
                       <span className="px-2 py-1 bg-brand-accent/90 text-white text-[10px] font-bold uppercase rounded backdrop-blur-sm">
-                        Platzhalter: Außenaufnahme
+                        {language === 'de' ? 'Platzhalter' : 'Placeholder'}: {language === 'de' ? 'Außenaufnahme' : 'Exterior Shot'}
                       </span>
                     </div>
                  </div>
@@ -288,7 +288,7 @@ export const Home = () => {
                     <img src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&q=80&w=600" alt="Werkstatt Innenansicht" loading="lazy" className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
                     <div className="absolute top-4 left-4 z-20">
                       <span className="px-2 py-1 bg-brand-accent/90 text-white text-[10px] font-bold uppercase rounded backdrop-blur-sm">
-                        Platzhalter: Halle & Bühne
+                        {language === 'de' ? 'Platzhalter' : 'Placeholder'}: {language === 'de' ? 'Halle & Bühne' : 'Garage & Lift'}
                       </span>
                     </div>
                  </div>
@@ -296,7 +296,7 @@ export const Home = () => {
                     <img src="https://images.unsplash.com/photo-1544641113-f9d22fa97950?auto=format&fit=crop&q=80&w=600" alt="Der Meister bei der Arbeit" loading="lazy" className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
                     <div className="absolute top-4 left-4 z-20">
                       <span className="px-2 py-1 bg-brand-accent/90 text-white text-[10px] font-bold uppercase rounded backdrop-blur-sm">
-                        Platzhalter: Meister Wishnu
+                        {language === 'de' ? 'Platzhalter' : 'Placeholder'}: {language === 'de' ? 'Meister Wishnu' : 'Master Wishnu'}
                       </span>
                     </div>
                  </div>
@@ -304,7 +304,7 @@ export const Home = () => {
                     <img src="https://images.unsplash.com/photo-1504222490345-c075b6008014?auto=format&fit=crop&q=80&w=600" alt="Das Team" loading="lazy" className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
                     <div className="absolute top-4 left-4 z-20">
                       <span className="px-2 py-1 bg-brand-accent/90 text-white text-[10px] font-bold uppercase rounded backdrop-blur-sm">
-                        Platzhalter: Das Team
+                        {language === 'de' ? 'Platzhalter' : 'Placeholder'}: {language === 'de' ? 'Das Team' : 'The Team'}
                       </span>
                     </div>
                  </div>
@@ -334,10 +334,10 @@ export const Home = () => {
               <p className="text-zinc-400 uppercase tracking-widest text-xs font-bold">— Marita Zoeller, Google Rezension</p>
            </div>
            <div className="p-12 lg:p-24 flex flex-col justify-center bg-white/5">
-              <h3 className="text-3xl font-bold mb-4">Bereit für den Service?</h3>
-              <p className="text-zinc-400 mb-8">Schreib uns dein Anliegen oder ruf direkt an. Wir finden schnell einen Termin für dich.</p>
+              <h3 className="text-3xl font-bold mb-4">{language === 'de' ? 'Bereit für den Service?' : 'Ready for Service?'}</h3>
+              <p className="text-zinc-400 mb-8">{language === 'de' ? 'Schreib uns dein Anliegen oder ruf direkt an. Wir finden schnell einen Termin für dich.' : 'Tell us your request or call us directly. We will find an appointment for you quickly.'}</p>
               <Link to="/kontakt" className="px-8 py-4 bg-brand-accent text-white font-bold text-center rounded-lg hover:bg-orange-600 transition-colors w-max">
-                Jetzt Termin anfragen
+                {language === 'de' ? 'Jetzt Termin anfragen' : 'Request Appointment Now'}
               </Link>
            </div>
         </div>

@@ -1,30 +1,28 @@
 import { SEO } from '../components/SEO';
 import { Target, Heart, Wrench } from 'lucide-react';
 import { ImageGallery } from '../components/ImageGallery';
+import { useTranslation } from '../i18n/LanguageContext';
 
 export const UeberUns = () => {
+  const { t } = useTranslation();
   return (
     <>
       <SEO 
-        title="Über die Reparaturgarage & KFZ-Meister Wishnu Pranatyo" 
-        description="Lerne die Gesichter hinter der Reparaturgarage kennen. Inhabergeführt, ehrlich, pfälzisch. Wir sind deine Meisterwerkstatt in Enkenbach-Alsenborn." 
+        title={t.nav.about} 
+        description={t.about.p1} 
         canonical="/ueber-uns" 
       />
 
       <div className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div>
-            <span className="text-brand-accent font-bold tracking-widest uppercase text-xs mb-4 block">Unsere Geschichte</span>
+            <span className="text-brand-accent font-bold tracking-widest uppercase text-xs mb-4 block">{t.about.tag}</span>
             <h1 className="text-5xl lg:text-6xl font-bold tracking-tight mb-8 text-brand-dark">
-              Mehr als nur <br /> <span className="text-brand-accent italic">Schrauber.</span>
+              {t.about.title} <br /> <span className="text-brand-accent italic">{t.about.italic}</span>
             </h1>
             <div className="space-y-6 text-zinc-700 font-normal text-lg leading-relaxed">
-            <p>
-              Die Reparaturgarage wurde aus einer klaren Vision heraus gegründet: Wir wollten eine **Autowerkstatt für Enkenbach-Alsenborn, Kaiserslautern und Mehlingen** schaffen, in der sich Kunden wieder ehrlich beraten fühlen. Keine Massenabfertigung, sondern direktes Handwerk.
-            </p>
-            <p>
-              Als Inhaber und geprüfter **KFZ-Meister** stehe ich persönlich für die Qualität unserer Arbeit ein. Mein Team und ich vereinen Erfahrung mit Leidenschaft – egal ob PKW, US-Import oder Motorrad. Deine zuverlässige Fachwerkstatt in der Pfalz.
-            </p>
+              <p>{t.about.p1}</p>
+              <p>{t.about.p2}</p>
             </div>
           </div>
           <div className="relative">
@@ -37,8 +35,8 @@ export const UeberUns = () => {
                 />
              </div>
              <div className="absolute -bottom-8 -left-8 bg-brand-dark text-white p-8 rounded-2xl shadow-xl max-w-sm hidden md:block z-20">
-               <p className="font-bold text-xl mb-2">KFZ-Meisterbetrieb</p>
-               <p className="text-sm font-light text-zinc-300">Offiziell eingetragen und zertifiziert. Für dein sicheres Gefühl auf der Straße.</p>
+               <p className="font-bold text-xl mb-2">{t.about.badgeTitle}</p>
+               <p className="text-sm font-light text-zinc-300">{t.about.badgeDesc}</p>
              </div>
           </div>
         </div>
@@ -51,22 +49,22 @@ export const UeberUns = () => {
                 <div className="w-16 h-16 mx-auto bg-white rounded-2xl flex items-center justify-center shadow-md mb-6 text-brand-accent">
                   <Target className="w-8 h-8" />
                 </div>
-                <h3 className="text-xl font-bold mb-4 text-brand-dark">Unsere Mission</h3>
-                <p className="text-zinc-700 font-normal">Reparieren statt nur wild Teile zu tauschen. Wir suchen nach der besten Lösung für dich und deinen Geldbeutel.</p>
+                <h3 className="text-xl font-bold mb-4 text-brand-dark">{t.about.mission.title}</h3>
+                <p className="text-zinc-700 font-normal">{t.about.mission.desc}</p>
               </div>
               <div className="text-center">
                 <div className="w-16 h-16 mx-auto bg-white rounded-2xl flex items-center justify-center shadow-md mb-6 text-brand-accent">
                   <Heart className="w-8 h-8" />
                 </div>
-                <h3 className="text-xl font-bold mb-4 text-brand-dark">Echte Leidenschaft</h3>
-                <p className="text-zinc-700 font-normal">Wir lieben Autos und Motorräder. Und wir behandeln jedes Kundenfahrzeug so, als wäre es unser eigenes.</p>
+                <h3 className="text-xl font-bold mb-4 text-brand-dark">{t.about.passion.title}</h3>
+                <p className="text-zinc-700 font-normal">{t.about.passion.desc}</p>
               </div>
               <div className="text-center">
                 <div className="w-16 h-16 mx-auto bg-white rounded-2xl flex items-center justify-center shadow-md mb-6 text-brand-accent">
                   <Wrench className="w-8 h-8" />
                 </div>
-                <h3 className="text-xl font-bold mb-4 text-brand-dark">Meister-Qualität</h3>
-                <p className="text-zinc-700 font-normal">Fundierte Ausbildung, ständige Weiterbildung und modernstes Equipment sichern unseren hohen Standard.</p>
+                <h3 className="text-xl font-bold mb-4 text-brand-dark">{t.about.quality.title}</h3>
+                <p className="text-zinc-700 font-normal">{t.about.quality.desc}</p>
               </div>
            </div>
         </div>

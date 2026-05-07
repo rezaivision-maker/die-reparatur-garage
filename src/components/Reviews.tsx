@@ -1,34 +1,37 @@
 import { motion } from 'motion/react';
 import { Star, Quote } from 'lucide-react';
+import { useTranslation } from '../i18n/LanguageContext';
 
 const reviews = [
   {
     name: "Marita Zoeller",
     rating: 5,
     text: "Sehr gute Werkstatt. Freundlichkeit und Service werden groß geschrieben. Kann man jederzeit weiter empfehlen.",
-    date: "vor 1 Jahr"
+    date: { de: "vor 1 Jahr", en: "1 year ago" }
   },
   {
     name: "Benjamin Eyrisch",
     rating: 5,
     text: "Kann man guten Gewissens weiterempfehlen!! Top Preis Leistung!! Tolles Team, Kompetent, Schnell und kurzfristig! Wer woanders hingeht ist selber Schuld!",
-    date: "vor 2 Jahren"
+    date: { de: "vor 2 Jahren", en: "2 years ago" }
   },
   {
     name: "zitrusfrucht orange",
     rating: 5,
     text: "Sehr kompetentes, nettes Team. Super Preis Leistungsverhältnis. Wir sind seit den Anfangsschuhen dabei und sind immer sehr Zufrieden.",
-    date: "vor 3 Jahren"
+    date: { de: "vor 3 Jahren", en: "3 years ago" }
   },
   {
     name: "A M",
     rating: 5,
     text: "Super nettes Team mit Top Preis-/Leistungsverhältnis. Im Vergleich zu vielen anderen Werkstätten hat man hier definitiv das Gefühl, dass sie ihre Arbeit gerne machen.",
-    date: "vor 1 Jahr"
+    date: { de: "vor 1 Jahr", en: "1 year ago" }
   }
 ];
 
 export const Reviews = () => {
+  const { language, t } = useTranslation();
+
   return (
     <section className="py-24 bg-brand-gray overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
@@ -40,11 +43,11 @@ export const Reviews = () => {
             className="inline-flex items-center gap-2 px-3 py-1 bg-white rounded-full border border-zinc-200 mb-4"
           >
             <Star className="w-4 h-4 text-brand-accent fill-brand-accent" />
-            <span className="text-xs font-bold uppercase tracking-widest text-brand-dark">Kundenstimmen</span>
+            <span className="text-xs font-bold uppercase tracking-widest text-brand-dark">{t.reviews.tag}</span>
           </motion.div>
-          <h2 className="text-4xl font-bold text-brand-dark mb-4">Das sagen unsere Kunden</h2>
+          <h2 className="text-4xl font-bold text-brand-dark mb-4">{t.reviews.title}</h2>
           <p className="text-zinc-600 max-w-2xl mx-auto">
-            Ehrliches Feedback ist uns wichtig. Hier sind einige unserer neuesten Google-Rezensionen von zufriedenen Fahrzeugbesitzern.
+            {t.reviews.subtitle}
           </p>
         </div>
 
@@ -69,7 +72,7 @@ export const Reviews = () => {
               </p>
               <div className="flex items-center justify-between relative z-10">
                 <span className="font-bold text-brand-dark">{review.name}</span>
-                <span className="text-xs text-zinc-400 uppercase tracking-widest">{review.date}</span>
+                <span className="text-xs text-zinc-400 uppercase tracking-widest">{language === 'de' ? review.date.de : review.date.en}</span>
               </div>
             </motion.div>
           ))}
@@ -82,7 +85,7 @@ export const Reviews = () => {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 text-brand-accent font-bold hover:underline"
           >
-            Alle Rezensionen auf Google lesen
+            {t.reviews.cta}
           </a>
         </div>
       </div>

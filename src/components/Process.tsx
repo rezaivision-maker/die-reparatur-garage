@@ -1,28 +1,12 @@
 import { Calendar, Search, CheckCircle2 } from 'lucide-react';
 import { motion } from 'motion/react';
+import { useTranslation } from '../i18n/LanguageContext';
 
-const steps = [
-  {
-    id: "01",
-    icon: Calendar,
-    title: "1. Termin & Annahme",
-    desc: "Schnelle Terminvergabe. Wir besprechen dein Problem persönlich am Fahrzeug und nehmen deine Wünsche auf."
-  },
-  {
-    id: "02",
-    icon: Search,
-    title: "2. Transparente Diagnose",
-    desc: "Wir prüfen genau und klären dich auf, BEVOR wir Teile tauschen. Du erhältst einen ehrlichen Kostenvoranschlag."
-  },
-  {
-    id: "03",
-    icon: CheckCircle2,
-    title: "3. Fachgerechte Reparatur",
-    desc: "Zügige Umsetzung nach Herstellervorgaben. Du holst dein fahrbereites Auto ab – ohne versteckte Kosten auf der Rechnung."
-  }
-];
+const icons = [Calendar, Search, CheckCircle2];
 
 export const Process = () => {
+  const { t } = useTranslation();
+
   return (
     <section className="py-24 bg-brand-dark text-white relative overflow-hidden">
       {/* Background Decor */}
@@ -31,10 +15,10 @@ export const Process = () => {
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="text-center mb-16">
-          <span className="text-brand-accent font-bold tracking-widest uppercase text-xs mb-4 block">Der Ablauf</span>
-          <h2 className="text-4xl font-bold mb-4">In 3 Schritten zurück auf die Straße</h2>
+          <span className="text-brand-accent font-bold tracking-widest uppercase text-xs mb-4 block">{t.process.tag}</span>
+          <h2 className="text-4xl font-bold mb-4">{t.process.title}</h2>
           <p className="text-zinc-400 max-w-2xl mx-auto">
-            Werkstattbesuche müssen nicht kompliziert oder undurchsichtig sein. Bei uns weißt du immer genau, woran du bist.
+            {t.process.subtitle}
           </p>
         </div>
 
@@ -42,27 +26,30 @@ export const Process = () => {
           {/* Connecting Line for Desktop */}
           <div className="hidden md:block absolute top-1/2 left-0 w-full h-[1px] bg-white/10 -translate-y-1/2 z-0" />
 
-          {steps.map((step, index) => (
-            <motion.div 
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.2 }}
-              className="bg-zinc-800/50 backdrop-blur-md border border-white/10 p-8 rounded-2xl relative z-10 hover:border-brand-accent/50 transition-colors"
-            >
-              <div className="absolute -top-4 -left-4 w-12 h-12 bg-brand-accent text-white font-black text-xl flex items-center justify-center rounded-xl shadow-lg transform rotate-[-5deg]">
-                {step.id}
-              </div>
-              <div className="w-14 h-14 bg-white/5 rounded-full flex items-center justify-center mb-6 mt-4">
-                <step.icon className="w-6 h-6 text-brand-accent" />
-              </div>
-              <h3 className="text-xl font-bold mb-3">{step.title}</h3>
-              <p className="text-zinc-400 font-light leading-relaxed">
-                {step.desc}
-              </p>
-            </motion.div>
-          ))}
+          {t.process.steps.map((step: any, index: number) => {
+            const Icon = icons[index];
+            return (
+              <motion.div 
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.2 }}
+                className="bg-zinc-800/50 backdrop-blur-md border border-white/10 p-8 rounded-2xl relative z-10 hover:border-brand-accent/50 transition-colors"
+              >
+                <div className="absolute -top-4 -left-4 w-12 h-12 bg-brand-accent text-white font-black text-xl flex items-center justify-center rounded-xl shadow-lg transform rotate-[-5deg]">
+                  0{index + 1}
+                </div>
+                <div className="w-14 h-14 bg-white/5 rounded-full flex items-center justify-center mb-6 mt-4">
+                  {Icon && <Icon className="w-6 h-6 text-brand-accent" />}
+                </div>
+                <h3 className="text-xl font-bold mb-3">{step.title}</h3>
+                <p className="text-zinc-400 font-light leading-relaxed">
+                  {step.desc}
+                </p>
+              </motion.div>
+            );
+          })}
         </div>
       </div>
     </section>
