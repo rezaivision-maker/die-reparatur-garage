@@ -105,24 +105,42 @@ export const Home = () => {
             </div>
             
             {/* Trust Indicators */}
-            <div className="mt-16 flex items-center gap-8 border-t border-white/10 pt-8">
-              <div>
-                <p className="text-3xl font-black text-white">15+</p>
-                <p className="text-xs text-zinc-400 uppercase tracking-widest mt-1">{t.hero.stats.expertise}</p>
+            <div className="mt-16 flex flex-wrap items-center gap-8 border-t border-white/10 pt-8">
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 bg-brand-accent/20 rounded-full flex items-center justify-center">
+                  <ShieldCheck className="w-5 h-5 text-brand-accent" />
+                </div>
+                <div>
+                  <p className="text-lg font-black text-white leading-none">{t.hero.stats.expertise.split(' ')[t.hero.stats.expertise.split(' ').length - 1]}</p>
+                  <p className="text-[10px] text-zinc-400 uppercase tracking-widest mt-1">
+                    {t.hero.stats.expertise.replace(t.hero.stats.expertise.split(' ')[t.hero.stats.expertise.split(' ').length - 1], '').trim()}
+                  </p>
+                </div>
               </div>
-              <div className="w-[1px] h-10 bg-white/10" />
-              <div>
-                <p className="text-3xl font-black text-white">100%</p>
-                <p className="text-xs text-zinc-400 uppercase tracking-widest mt-1">{t.hero.stats.loyalty}</p>
+
+              <div className="hidden sm:block w-[1px] h-10 bg-white/10" />
+
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 bg-brand-accent/20 rounded-full flex items-center justify-center">
+                  <Wrench className="w-5 h-5 text-brand-accent" />
+                </div>
+                <div>
+                  <p className="text-lg font-black text-white leading-none">{t.hero.stats.loyalty.split(' ')[t.hero.stats.loyalty.split(' ').length - 1]}</p>
+                  <p className="text-[10px] text-zinc-400 uppercase tracking-widest mt-1">
+                    {t.hero.stats.loyalty.replace(t.hero.stats.loyalty.split(' ')[t.hero.stats.loyalty.split(' ').length - 1], '').trim()}
+                  </p>
+                </div>
               </div>
-              <div className="w-[1px] h-10 bg-white/10" />
+
+              <div className="hidden sm:block w-[1px] h-10 bg-white/10" />
+
               <div>
                 <div className="flex gap-0.5 mb-1">
                   {[...Array(5)].map((_, i) => (
                     <Star key={i} className="w-4 h-4 text-brand-accent fill-brand-accent" />
                   ))}
                 </div>
-                <p className="text-xs text-zinc-400 uppercase tracking-widest">{t.hero.stats.rating}</p>
+                <p className="text-[10px] text-zinc-400 uppercase tracking-widest">{t.hero.stats.rating}</p>
               </div>
             </div>
           </motion.div>

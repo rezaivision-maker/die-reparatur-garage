@@ -20,9 +20,9 @@ export const translations = {
       cta1: 'Termin vereinbaren',
       cta2: 'Unsere Leistungen',
       stats: {
-        expertise: 'Jahre Expertise',
-        loyalty: 'Stammkunden Quote',
-        rating: '5.0 Google Rating'
+        expertise: 'Meister seit 2011',
+        loyalty: 'Werkstatt seit 2017',
+        rating: 'Top Google Rating'
       }
     },
     garage: {
@@ -172,9 +172,9 @@ export const translations = {
       cta1: 'Schedule Appointment',
       cta2: 'Our Services',
       stats: {
-        expertise: 'Years Experience',
-        loyalty: 'Customer Loyalty',
-        rating: '5.0 Google Rating'
+        expertise: 'Master since 2011',
+        loyalty: 'Garage since 2017',
+        rating: 'Top Google Rating'
       }
     },
     garage: {
