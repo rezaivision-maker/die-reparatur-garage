@@ -258,17 +258,18 @@ export const Home = () => {
                 </Link>
               </div>
            </div>
+
            <div className="relative">
               <div className="grid grid-cols-2 gap-4">
-                 <div className="col-span-2 rounded-2xl w-full h-72 overflow-hidden bg-zinc-100 border border-zinc-200 relative group flex items-center justify-center shadow-md">
+                 <div className="rounded-2xl w-full h-64 overflow-hidden bg-zinc-100 border border-zinc-200 relative group flex items-center justify-center shadow-md">
                     <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&q=80&w=1200" alt="Werkstatt Außenansicht" loading="lazy" className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
                     <div className="absolute top-4 left-4 z-20">
                       <span className="px-2 py-1 bg-brand-accent/90 text-white text-[10px] font-bold uppercase rounded backdrop-blur-sm">
-                        Platzhalter: Außenaufnahme Werkstatt
+                        Platzhalter: Außenaufnahme
                       </span>
                     </div>
                  </div>
-                 <div className="rounded-2xl w-full h-56 overflow-hidden bg-zinc-100 border border-zinc-200 relative group flex items-center justify-center shadow-md">
+                 <div className="rounded-2xl w-full h-64 overflow-hidden bg-zinc-100 border border-zinc-200 relative group flex items-center justify-center shadow-md">
                     <img src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&q=80&w=600" alt="Werkstatt Innenansicht" loading="lazy" className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
                     <div className="absolute top-4 left-4 z-20">
                       <span className="px-2 py-1 bg-brand-accent/90 text-white text-[10px] font-bold uppercase rounded backdrop-blur-sm">
@@ -276,11 +277,19 @@ export const Home = () => {
                       </span>
                     </div>
                  </div>
-                 <div className="rounded-2xl w-full h-56 overflow-hidden bg-zinc-100 border border-zinc-200 relative group flex items-center justify-center shadow-md">
+                 <div className="rounded-2xl w-full h-64 overflow-hidden bg-zinc-100 border border-zinc-200 relative group flex items-center justify-center shadow-md">
                     <img src="https://images.unsplash.com/photo-1544641113-f9d22fa97950?auto=format&fit=crop&q=80&w=600" alt="Der Meister bei der Arbeit" loading="lazy" className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
                     <div className="absolute top-4 left-4 z-20">
                       <span className="px-2 py-1 bg-brand-accent/90 text-white text-[10px] font-bold uppercase rounded backdrop-blur-sm">
                         Platzhalter: Meister Wishnu
+                      </span>
+                    </div>
+                 </div>
+                 <div className="rounded-2xl w-full h-64 overflow-hidden bg-zinc-100 border border-zinc-200 relative group flex items-center justify-center shadow-md">
+                    <img src="https://images.unsplash.com/photo-1504222490345-c075b6008014?auto=format&fit=crop&q=80&w=600" alt="Das Team" loading="lazy" className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                    <div className="absolute top-4 left-4 z-20">
+                      <span className="px-2 py-1 bg-brand-accent/90 text-white text-[10px] font-bold uppercase rounded backdrop-blur-sm">
+                        Platzhalter: Das Team
                       </span>
                     </div>
                  </div>
