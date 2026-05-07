@@ -67,8 +67,8 @@ export const Home = () => {
   return (
     <>
       <SEO 
-        title="KFZ Meisterwerkstatt in Enkenbach-Alsenborn" 
-        description="Die Reparaturgarage von KFZ-Meister Wishnu Pranatyo. Professionelle Autoreparatur, Inspektion und US-Umrüstung in Enkenbach-Alsenborn. Fair, ehrlich, meisterhaft." 
+        title="KFZ Meisterwerkstatt in Enkenbach-Alsenborn | Kaiserslautern & Region" 
+        description="Die Reparaturgarage: Deine ehrliche Autowerkstatt für Enkenbach-Alsenborn, Kaiserslautern, Mehlingen & Sembach. Günstige Autoreparatur, Inspektion & US-Car Umrüstung vom KFZ-Meister." 
         canonical="/" 
       />
 
@@ -85,7 +85,7 @@ export const Home = () => {
           >
             <div className="inline-flex items-center gap-2 px-3 py-1 bg-white/10 rounded-full border border-white/20 mb-8 backdrop-blur-sm">
               <span className="flex w-2 h-2 rounded-full bg-brand-accent animate-pulse" />
-              <span className="text-xs font-bold tracking-widest uppercase">KFZ Meisterbetrieb Enkenbach-Alsenborn</span>
+              <span className="text-xs font-bold tracking-widest uppercase">KFZ Meisterbetrieb Enkenbach-Alsenborn • Kaiserslautern • Sembach</span>
             </div>
             
             <h1 className="text-5xl lg:text-7xl font-bold tracking-tight mb-8 leading-[1.1]">
@@ -93,7 +93,7 @@ export const Home = () => {
             </h1>
             
             <p className="text-lg text-zinc-300 font-light leading-relaxed max-w-xl mb-12">
-              Willkommen in der Reparaturgarage. Bei Inhaber und KFZ-Meister Wishnu Pranatyo bekommst du ehrliches Handwerk, transparente Preise und absolute Zuverlässigkeit für dein Auto und Zweirad.
+              Willkommen in der Reparaturgarage. Bei Inhaber und KFZ-Meister Wishnu Pranatyo bekommst du ehrliches Handwerk, transparente Preise und absolute Zuverlässigkeit. Die preiswerte Autowerkstatt für die Region Kaiserslautern, Mehlingen und Enkenbach.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
@@ -248,10 +248,10 @@ export const Home = () => {
               </h2>
               <div className="space-y-6 text-zinc-700 font-normal text-lg leading-relaxed">
                 <p>
-                  Wir sind keine unpersönliche Kette, bei der du nur eine Nummer bist. Die Reparaturgarage ist ein inhabergeführter Betrieb im Herzen von Enkenbach-Alsenborn. Wenn du bei uns dein Auto abgibst, sprichst du direkt mit dem KFZ-Meister.
+                  Wir sind keine unpersönliche Kette, bei der du nur eine Nummer bist. Die Reparaturgarage ist ein inhabergeführter **KFZ-Meisterbetrieb** im Herzen von Enkenbach-Alsenborn. Wenn du im Umkreis von Kaiserslautern, Mehlingen oder Sembach dein Auto günstig und fachgerecht reparieren lassen möchtest, sprichst du bei uns direkt mit dem Chef.
                 </p>
                 <p>
-                  Wishnu Pranatyo und sein Team reparieren nicht nur, sondern suchen immer nach der sinnvollsten und wirtschaftlichsten Lösung für dein Fahrzeug. Keine versteckten Kosten, keine unnötigen Reparaturen – nur ehrliches Handwerk.
+                  Wishnu Pranatyo und sein Team reparieren nicht nur, sondern suchen immer nach der sinnvollsten und preiswertesten Lösung für dein Fahrzeug. Keine versteckten Kosten, keine unnötigen Reparaturen – nur ehrliche Arbeit als deine Fachwerkstatt für PKW und Zweiräder.
                 </p>
               </div>
               <ul className="mt-8 space-y-4">

@@ -22,8 +22,8 @@ export const Leistungen = () => {
   return (
     <>
       <SEO 
-        title="Leistungen & KFZ-Service" 
-        description="Unsere Leistungen in Enkenbach-Alsenborn: Inspektion, Bremsen-Service, Diagnose, Autoglas und unsere Spezialität: US-Fahrzeug Umrüstung." 
+        title="Leistungen & KFZ-Service | US-Cars & Inspektion Enkenbach-Alsenborn" 
+        description="Professionelle Autoreparatur in Enkenbach-Alsenborn & Kaiserslautern. Inspektion, HU/AU, US-Car Umrüstung & Zweirad-Service. Preiswert & kompetent." 
         canonical="/leistungen" 
       />
 
@@ -35,7 +35,7 @@ export const Leistungen = () => {
             Was wir <span className="text-brand-accent italic">können.</span>
           </h1>
           <p className="text-lg text-zinc-300 max-w-2xl font-light">
-            Als Meisterbetrieb decken wir das komplette Leistungsspektrum rund um dein Fahrzeug ab. Von der einfachen Wartung bis zum komplexen Umbau – mit Handwerkerehre und modernster Technik.
+            Als **KFZ-Meisterbetrieb** für Enkenbach-Alsenborn, Kaiserslautern und Winnweiler decken wir das komplette Leistungsspektrum ab. Von der günstigen Wartung bis zur US-Umrüstung.
           </p>
         </div>
       </div>
@@ -55,7 +55,7 @@ export const Leistungen = () => {
            <ServiceItem 
              icon={Car}
              title="US-Fahrzeuge & Import-Umrüstungen"
-             desc="Du hast dir einen Traum aus Übersee erfüllt? Wir kümmern uns um die nötige Umrüstung für den europäischen Markt (Lichtanlage, Tachoanpassung, etc.) und begleiten die Fahrzeugabnahme bis zum Gutachten."
+             desc="Dein Spezialist für US-Cars im Raum Kaiserslautern und Westpfalz. Wir kümmern uns um die nötige Umrüstung für den europäischen Markt und begleiten die Fahrzeugabnahme bis zum Gutachten."
            />
            <ServiceItem 
              icon={Zap}

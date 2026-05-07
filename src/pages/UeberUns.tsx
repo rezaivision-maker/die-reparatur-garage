@@ -19,12 +19,12 @@ export const UeberUns = () => {
               Mehr als nur <br /> <span className="text-brand-accent italic">Schrauber.</span>
             </h1>
             <div className="space-y-6 text-zinc-700 font-normal text-lg leading-relaxed">
-              <p>
-                Die Reparaturgarage wurde aus einer klaren Vision heraus gegründet: Wir wollten eine Werkstatt in Enkenbach-Alsenborn schaffen, in der sich Kunden wieder ehrlich beraten fühlen. Keine Massenabfertigung, kein Fachchinesisch, das niemand versteht, sondern direkte Kommunikation und sauberes Handwerk.
-              </p>
-              <p>
-                Als Inhaber und geprüfter KFZ-Meister stehe ich, Wishnu Pranatyo, persönlich für die Qualität unserer Arbeit ein. Mein Team und ich vereinen langjährige Erfahrung in der Automobilbranche mit einer echten, tief verwurzelten Leidenschaft für Motoren – egal ob auf vier oder auf zwei Rädern.
-              </p>
+            <p>
+              Die Reparaturgarage wurde aus einer klaren Vision heraus gegründet: Wir wollten eine **Autowerkstatt für Enkenbach-Alsenborn, Kaiserslautern und Mehlingen** schaffen, in der sich Kunden wieder ehrlich beraten fühlen. Keine Massenabfertigung, sondern direktes Handwerk.
+            </p>
+            <p>
+              Als Inhaber und geprüfter **KFZ-Meister** stehe ich persönlich für die Qualität unserer Arbeit ein. Mein Team und ich vereinen Erfahrung mit Leidenschaft – egal ob PKW, US-Import oder Motorrad. Deine zuverlässige Fachwerkstatt in der Pfalz.
+            </p>
             </div>
           </div>
           <div className="relative">
