@@ -47,6 +47,7 @@ export const Kontakt = () => {
                    <img 
                      src="https://images.unsplash.com/photo-1599256872237-5dcc0fbe9668?auto=format&fit=crop&q=80&w=800" 
                      alt="Werkstatt Außen" 
+                     loading="lazy"
                      className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                    />
                    <div className="absolute inset-0 bg-black/20" />
@@ -109,7 +110,7 @@ export const Kontakt = () => {
                      <p className="font-normal">Wir haben deine Anfrage erhalten und werden uns in Kürze telefonisch oder per E-Mail bei dir melden.</p>
                    </div>
                  ) : (
-                   <form onSubmit={handleSubmit} className="space-y-6">
+                   <form action="https://formspree.io/f/placeholder" method="POST" onSubmit={handleSubmit} className="space-y-6">
                      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                        <div>
                          <label htmlFor="name" className="block text-xs font-bold uppercase tracking-widest text-zinc-500 mb-2">Name</label>
