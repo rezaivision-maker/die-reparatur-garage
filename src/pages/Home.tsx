@@ -90,10 +90,10 @@ export const Home = () => {
             
             <div className="flex flex-col sm:flex-row gap-5 mb-16">
               <Link to="/kontakt" className="px-10 py-5 bg-brand-accent text-white font-bold rounded-xl hover:bg-orange-600 transition-all shadow-xl shadow-brand-accent/30 flex items-center justify-center gap-2 group">
-                {t.hero.ctaPrimary} <Zap className="w-4 h-4 group-hover:scale-125 transition-transform" />
+                {t.hero.cta1} <Zap className="w-4 h-4 group-hover:scale-125 transition-transform" />
               </Link>
               <Link to="/leistungen" className="px-10 py-5 bg-white/5 backdrop-blur-sm border border-white/10 text-white font-bold rounded-xl hover:bg-white/10 transition-all flex items-center justify-center gap-2">
-                {t.hero.ctaSecondary} <ArrowRight className="w-4 h-4" />
+                {t.hero.cta2} <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
 
