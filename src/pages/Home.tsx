@@ -6,6 +6,7 @@ import { SEO } from '../components/SEO';
 import { Reviews } from '../components/Reviews';
 import { Process } from '../components/Process';
 import { MiniFAQ } from '../components/MiniFAQ';
+import { ImageGallery } from '../components/ImageGallery';
 
 const FeatureCard = ({ icon: Icon, title, desc }: { icon: any, title: string, desc: string }) => (
   <div className="bg-white p-8 rounded-2xl shadow-md border border-zinc-200 hover:shadow-lg transition-shadow group relative overflow-hidden">
@@ -267,6 +268,9 @@ export const Home = () => {
       {/* 3-Step Process Section */}
       <Process />
 
+      {/* Image Gallery */}
+      <ImageGallery />
+
       {/* Google Reviews Section */}
       <Reviews />
 
@@ -278,8 +282,8 @@ export const Home = () => {
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 border-l border-r border-white/5">
            <div className="p-12 lg:p-24 border-b lg:border-b-0 lg:border-r border-white/5">
               <Zap className="w-10 h-10 text-brand-accent mb-8" />
-              <h3 className="text-3xl lg:text-4xl font-bold mb-6 italic">"Wishnu weiß genau was er tut. Die einzige Werkstatt, der ich voll vertraue."</h3>
-              <p className="text-zinc-400 uppercase tracking-widest text-xs font-bold">— Markus T., Enkenbach-Alsenborn</p>
+              <h3 className="text-2xl lg:text-3xl font-bold mb-6 italic">"Sehr gute Werkstatt. Freundlichkeit und Service werden groß geschrieben. Kann man jederzeit weiter empfehlen."</h3>
+              <p className="text-zinc-400 uppercase tracking-widest text-xs font-bold">— Marita Zoeller, Google Rezension</p>
            </div>
            <div className="p-12 lg:p-24 flex flex-col justify-center bg-white/5">
               <h3 className="text-3xl font-bold mb-4">Bereit für den Service?</h3>
