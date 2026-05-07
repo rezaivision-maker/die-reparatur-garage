@@ -64,7 +64,7 @@ export const Home = () => {
           <div className="absolute inset-0 bg-linear-to-t from-brand-dark via-transparent to-transparent" />
         </div>
         
-        <div className="max-w-7xl mx-auto px-6 relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div className="max-w-7xl mx-auto px-6 relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-stretch">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -142,12 +142,12 @@ export const Home = () => {
           </motion.div>
           
           <motion.div 
-             initial={{ opacity: 0, scale: 0.95 }}
-             animate={{ opacity: 1, scale: 1 }}
+             initial={{ opacity: 0, x: 20 }}
+             animate={{ opacity: 1, x: 0 }}
              transition={{ duration: 1, delay: 0.2 }}
-             className="hidden lg:flex items-center justify-end relative h-full"
+             className="hidden lg:block relative self-stretch"
           >
-             <div className="w-full max-w-sm rounded-[2rem] overflow-hidden border-8 border-brand-dark shadow-2xl relative z-10 bg-zinc-800 group aspect-[4/5]">
+             <div className="w-full h-full rounded-[2rem] overflow-hidden border-8 border-brand-dark shadow-2xl relative z-10 bg-zinc-800 group">
                 <AnimatePresence mode="popLayout" initial={false}>
                   <motion.div
                     key={currentImage}
