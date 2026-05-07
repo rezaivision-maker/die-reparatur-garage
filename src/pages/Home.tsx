@@ -145,9 +145,9 @@ export const Home = () => {
              initial={{ opacity: 0, scale: 0.95 }}
              animate={{ opacity: 1, scale: 1 }}
              transition={{ duration: 1, delay: 0.2 }}
-             className="hidden lg:flex items-center justify-center relative"
+             className="hidden lg:flex items-center justify-end relative h-full"
           >
-             <div className="w-full max-w-md rounded-[2rem] overflow-hidden border-8 border-brand-dark shadow-2xl relative z-10 bg-zinc-800 group aspect-[4/5] lg:aspect-auto lg:h-[80%]">
+             <div className="w-full max-w-sm rounded-[2rem] overflow-hidden border-8 border-brand-dark shadow-2xl relative z-10 bg-zinc-800 group aspect-[4/5]">
                 <AnimatePresence mode="popLayout" initial={false}>
                   <motion.div
                     key={currentImage}
