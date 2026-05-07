@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { ArrowRight, Settings, ShieldCheck, Wrench, Gauge, Car, Zap, Image as ImageIcon, ChevronLeft, ChevronRight } from 'lucide-react';
+import { ArrowRight, Settings, ShieldCheck, Wrench, Gauge, Car, Zap, Image as ImageIcon, ChevronLeft, ChevronRight, Star } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { SEO } from '../components/SEO';
 import { Reviews } from '../components/Reviews';
@@ -105,6 +105,15 @@ export const Home = () => {
               <div>
                 <p className="text-3xl font-black text-white">100%</p>
                 <p className="text-xs text-zinc-400 uppercase tracking-widest mt-1">Stammkunden Quote</p>
+              </div>
+              <div className="w-[1px] h-10 bg-white/10" />
+              <div>
+                <div className="flex gap-0.5 mb-1">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-4 h-4 text-brand-accent fill-brand-accent" />
+                  ))}
+                </div>
+                <p className="text-xs text-zinc-400 uppercase tracking-widest">5.0 Google Rating</p>
               </div>
             </div>
           </motion.div>
