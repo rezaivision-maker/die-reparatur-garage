@@ -12,7 +12,7 @@ const FaqItem = ({ question, answer }: { question: string, answer: string }) => 
         className="w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none"
         onClick={() => setIsOpen(!isOpen)}
       >
-        <span className="font-normal text-brand-dark lg:text-lg font-display">{question}</span>
+        <span className="text-brand-dark lg:text-lg font-display">{question}</span>
         <ChevronDown className={`w-5 h-5 text-brand-accent transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`} />
       </button>
       <div 

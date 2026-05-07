@@ -8,12 +8,12 @@
   
   --font-sans: 'Montserrat', sans-serif;
   --font-heading: 'Bebas Neue', cursive;
-  --font-display: 'Alfa Slab One', cursive;
+  --font-display: 'Montserrat', sans-serif;
 }
 
 @layer utilities {
   .font-heading { font-family: 'Bebas Neue', cursive; }
-  .font-display { font-family: 'Alfa Slab One', cursive; }
+  .font-display { font-family: 'Montserrat', sans-serif; font-weight: 800; }
 }
 
 @layer base {

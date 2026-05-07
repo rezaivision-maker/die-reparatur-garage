@@ -77,7 +77,7 @@ export const Kontakt = () => {
                    <div className="absolute inset-0 bg-black/20" />
                  </div>
                  <div className="p-10 lg:p-14 flex-1">
-                   <h2 className="text-3xl font-normal text-brand-dark mb-8 font-display">{t.contact.title}</h2>
+                   <h2 className="text-3xl text-brand-dark mb-8 font-display">{t.contact.title}</h2>
                  
                  <div className="space-y-8">
                     <div className="flex items-start gap-4">

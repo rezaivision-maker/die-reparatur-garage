@@ -13,7 +13,7 @@ const ServiceItem = ({ icon: Icon, title, desc }: { icon: any, title: string, de
         <Icon className="w-6 h-6 text-brand-accent group-hover:text-white" />
      </div>
      <div className="relative z-10">
-        <h3 className="text-xl font-normal mb-3 text-brand-dark font-display">{title}</h3>
+        <h3 className="text-xl mb-3 text-brand-dark font-display">{title}</h3>
         <p className="text-zinc-700 font-normal leading-relaxed">{desc}</p>
      </div>
   </div>

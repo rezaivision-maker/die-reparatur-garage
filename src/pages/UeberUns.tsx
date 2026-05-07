@@ -70,21 +70,21 @@ export const UeberUns = () => {
                 <div className="w-16 h-16 mx-auto bg-white rounded-2xl flex items-center justify-center shadow-md mb-6 text-brand-accent">
                   <Target className="w-8 h-8" />
                 </div>
-                <h3 className="text-xl font-normal mb-4 text-brand-dark font-display">{t.about.mission.title}</h3>
+                <h3 className="text-xl font-display mb-4 text-brand-dark">{t.about.mission.title}</h3>
                 <p className="text-zinc-700 font-normal">{t.about.mission.desc}</p>
               </div>
               <div className="text-center">
                 <div className="w-16 h-16 mx-auto bg-white rounded-2xl flex items-center justify-center shadow-md mb-6 text-brand-accent">
                   <Heart className="w-8 h-8" />
                 </div>
-                <h3 className="text-xl font-normal mb-4 text-brand-dark font-display">{t.about.passion.title}</h3>
+                <h3 className="text-xl font-display mb-4 text-brand-dark">{t.about.passion.title}</h3>
                 <p className="text-zinc-700 font-normal">{t.about.passion.desc}</p>
               </div>
               <div className="text-center">
                 <div className="w-16 h-16 mx-auto bg-white rounded-2xl flex items-center justify-center shadow-md mb-6 text-brand-accent">
                   <Wrench className="w-8 h-8" />
                 </div>
-                <h3 className="text-xl font-normal mb-4 text-brand-dark font-display">{t.about.quality.title}</h3>
+                <h3 className="text-xl font-display mb-4 text-brand-dark">{t.about.quality.title}</h3>
                 <p className="text-zinc-700 font-normal">{t.about.quality.desc}</p>
               </div>
            </div>
