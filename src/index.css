@@ -6,9 +6,14 @@
   --color-brand-gray: #f4f4f4;
   --color-brand-chrome: #e4e4e7;
   
-  --font-sans: 'Outfit', sans-serif;
-  --font-heading: 'Montserrat', sans-serif;
-  --font-script: 'Lobster', cursive;
+  --font-sans: 'Montserrat', sans-serif;
+  --font-heading: 'Bebas Neue', cursive;
+  --font-display: 'Alfa Slab One', cursive;
+}
+
+@layer utilities {
+  .font-heading { font-family: 'Bebas Neue', cursive; }
+  .font-display { font-family: 'Alfa Slab One', cursive; }
 }
 
 @layer base {

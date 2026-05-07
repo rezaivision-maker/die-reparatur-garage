@@ -78,8 +78,8 @@ export const Home = () => {
               <span className="text-xs font-bold tracking-widest uppercase">{t.hero.badge}</span>
             </div>
             
-            <h1 className="text-5xl lg:text-7xl font-black tracking-tight mb-8 leading-[1.1] font-heading uppercase">
-              {t.hero.title1} <span className="text-brand-accent font-script normal-case italic ml-2">{t.hero.title2}</span> <br /> {t.hero.title3}
+            <h1 className="text-6xl lg:text-8xl font-normal tracking-wide mb-8 leading-[1] font-heading uppercase">
+              {t.hero.title1} <span className="text-brand-accent">{t.hero.title2}</span> <br /> {t.hero.title3}
             </h1>
             
             <p className="text-lg text-zinc-300 font-light leading-relaxed max-w-xl mb-12">
@@ -262,9 +262,9 @@ export const Home = () => {
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
            <div>
               <span className="text-brand-accent font-bold tracking-widest uppercase text-xs mb-4 block">{t.garage.tag}</span>
-              <h2 className="text-4xl lg:text-5xl font-black tracking-tight mb-8 text-brand-dark font-heading uppercase leading-[1.1]">
+              <h2 className="text-3xl lg:text-4xl font-normal tracking-tight mb-8 text-brand-dark font-display leading-tight">
                 {t.garage.title.split('.')[0]}. <br /> 
-                <span className="text-brand-accent font-script normal-case italic block sm:inline">{t.garage.title.split('.')[1]}</span>
+                <span className="text-brand-accent block sm:inline">{t.garage.title.split('.')[1]}</span>
               </h2>
               <div className="space-y-6 text-zinc-700 font-normal text-lg leading-relaxed">
                 <p>{t.garage.p1}</p>
@@ -341,7 +341,7 @@ export const Home = () => {
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 border-l border-r border-white/5">
            <div className="p-12 lg:p-24 border-b lg:border-b-0 lg:border-r border-white/5">
               <Zap className="w-10 h-10 text-brand-accent mb-8" />
-              <h3 className="text-2xl lg:text-3xl font-black mb-6 font-script text-white leading-relaxed">"Sehr gute Werkstatt. Freundlichkeit und Service werden groß geschrieben. Kann man jederzeit weiter empfehlen."</h3>
+              <h3 className="text-xl lg:text-2xl font-normal mb-6 text-white leading-relaxed font-display">"Sehr gute Werkstatt. Freundlichkeit und Service werden groß geschrieben. Kann man jederzeit weiter empfehlen."</h3>
               <p className="text-zinc-400 uppercase tracking-widest text-xs font-bold">— Marita Zoeller, Google Rezension</p>
            </div>
            <div className="p-12 lg:p-24 flex flex-col justify-center bg-white/5">
