@@ -23,7 +23,12 @@ export const translations = {
         expertise: 'Meister seit 2011',
         loyalty: 'Werkstatt seit 2017',
         rating: 'Top Google Rating'
-      }
+      },
+      slides: [
+        { label: "Meisterqualität", desc: "Modernste Technik & jahrelange Erfahrung" },
+        { label: "Präzision", desc: "Exakte Diagnose für maximale Sicherheit" },
+        { label: "Handwerk", desc: "Sorgfalt bei jedem Handgriff" }
+      ]
     },
     garage: {
       tag: 'Die Garage',
@@ -165,17 +170,22 @@ export const translations = {
     },
     hero: {
       badge: 'Master Mechanic Shop Enkenbach-Alsenborn • Kaiserslautern',
-      title1: 'Masterful',
-      title2: 'Service.',
+      title1: 'Master',
+      title2: 'Quality.',
       title3: 'No Compromises.',
-      subtitle: 'Welcome to the Repair Garage. With owner and master mechanic Wishnu Pranatyo, you get honest craftsmanship, transparent pricing, and absolute reliability.',
+      subtitle: 'Expert auto repair you can trust. Owner Wishnu Pranatyo offers master mechanic expertise, honest advice, and fair pricing.',
       cta1: 'Schedule Appointment',
       cta2: 'Our Services',
       stats: {
         expertise: 'Master since 2011',
         loyalty: 'Garage since 2017',
         rating: 'Top Google Rating'
-      }
+      },
+      slides: [
+        { label: "Master Quality", desc: "State-of-the-art tech & years of experience" },
+        { label: "Precision", desc: "Exact diagnostics for maximum safety" },
+        { label: "Craftsmanship", desc: "Care in every single movement" }
+      ]
     },
     garage: {
       tag: 'The Garage',

@@ -25,21 +25,9 @@ const FeatureCard = ({ icon: Icon, title, desc }: { icon: any, title: string, de
 );
 
 const heroImages = [
-  {
-    url: "/images/hero-3.png",
-    label: "Meisterqualität",
-    desc: "Modernste Technik & jahrelange Erfahrung"
-  },
-  {
-    url: "/images/hero-1.png",
-    label: "Präzision",
-    desc: "Exakte Diagnose für maximale Sicherheit"
-  },
-  {
-    url: "/images/hero-2.png",
-    label: "Handwerk",
-    desc: "Sorgfalt bei jedem Handgriff"
-  }
+  { url: "/images/hero-3.png" },
+  { url: "/images/hero-1.png" },
+  { url: "/images/hero-2.png" }
 ];
 
 export const Home = () => {
@@ -163,7 +151,7 @@ export const Home = () => {
                   >
                     <img 
                       src={heroImages[currentImage].url} 
-                      alt={heroImages[currentImage].label} 
+                      alt={t.hero.slides[currentImage].label} 
                       className="w-full h-full object-cover scale-105"
                     />
                     
@@ -178,7 +166,7 @@ export const Home = () => {
                          className="flex items-center gap-3 mb-2"
                        >
                          <ShieldCheck className="w-6 h-6 text-brand-accent" />
-                         <span className="text-sm font-bold uppercase tracking-widest">{heroImages[currentImage].label}</span>
+                         <span className="text-sm font-bold uppercase tracking-widest">{t.hero.slides[currentImage].label}</span>
                        </motion.div>
                        <motion.p 
                          initial={{ y: 20, opacity: 0 }}
@@ -186,7 +174,7 @@ export const Home = () => {
                          transition={{ delay: 0.7 }}
                          className="font-light text-zinc-300"
                        >
-                         {heroImages[currentImage].desc}
+                         {t.hero.slides[currentImage].desc}
                        </motion.p>
                     </div>
                   </motion.div>
