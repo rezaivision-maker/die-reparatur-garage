@@ -13,7 +13,7 @@ const ServiceItem = ({ icon: Icon, title, desc }: { icon: any, title: string, de
         <Icon className="w-6 h-6 text-brand-accent group-hover:text-white" />
      </div>
      <div className="relative z-10">
-        <h3 className="text-xl font-bold mb-3 text-brand-dark">{title}</h3>
+        <h3 className="text-xl font-normal mb-3 text-brand-dark font-display">{title}</h3>
         <p className="text-zinc-700 font-normal leading-relaxed">{desc}</p>
      </div>
   </div>
@@ -36,8 +36,8 @@ export const Leistungen = () => {
         <div className="absolute inset-0 bg-linear-to-b from-transparent to-brand-dark/95 z-0" />
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <span className="text-brand-accent font-bold tracking-widest uppercase text-xs mb-4 block">{t.services.tag}</span>
-          <h1 className="text-5xl lg:text-7xl font-bold tracking-tight mb-8">
-            {t.services.title} <span className="text-brand-accent italic">{t.services.italic}</span>
+          <h1 className="text-6xl lg:text-8xl font-normal tracking-wide mb-8 font-heading uppercase leading-[1]">
+            {t.services.title} <span className="text-brand-accent">{t.services.italic}</span>
           </h1>
           <p className="text-lg text-zinc-300 max-w-2xl font-light">
             Als <span className="text-brand-accent font-bold">KFZ-Meisterbetrieb</span> decken wir das komplette Leistungsspektrum ab. Von der günstigen Wartung bis zur US-Umrüstung.
@@ -62,7 +62,7 @@ export const Leistungen = () => {
         <div className="mt-16 bg-brand-accent rounded-2xl p-10 lg:p-16 text-center text-white relative overflow-hidden shadow-xl shadow-brand-accent/20">
           <div className="absolute inset-0 bg-black/10" />
           <div className="relative z-10">
-            <h2 className="text-3xl font-bold mb-4">{t.services.notListed.title}</h2>
+            <h2 className="text-3xl lg:text-4xl font-normal mb-4 font-display">{t.services.notListed.title}</h2>
             <p className="mb-8 font-light max-w-xl mx-auto">
               {t.services.notListed.desc}
             </p>

@@ -17,8 +17,8 @@ export const UeberUns = () => {
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div>
             <span className="text-brand-accent font-bold tracking-widest uppercase text-xs mb-4 block">{t.about.tag}</span>
-            <h1 className="text-5xl lg:text-6xl font-bold tracking-tight mb-8 text-brand-dark">
-              {t.about.title} <br /> <span className="text-brand-accent italic">{t.about.italic}</span>
+            <h1 className="text-6xl lg:text-8xl font-normal tracking-wide mb-8 text-brand-dark font-heading uppercase leading-[1]">
+              {t.about.title} <br /> <span className="text-brand-accent">{t.about.italic}</span>
             </h1>
             <div className="space-y-6 text-zinc-700 font-normal text-lg leading-relaxed">
               <p>{t.about.p1}</p>
@@ -70,21 +70,21 @@ export const UeberUns = () => {
                 <div className="w-16 h-16 mx-auto bg-white rounded-2xl flex items-center justify-center shadow-md mb-6 text-brand-accent">
                   <Target className="w-8 h-8" />
                 </div>
-                <h3 className="text-xl font-bold mb-4 text-brand-dark">{t.about.mission.title}</h3>
+                <h3 className="text-xl font-normal mb-4 text-brand-dark font-display">{t.about.mission.title}</h3>
                 <p className="text-zinc-700 font-normal">{t.about.mission.desc}</p>
               </div>
               <div className="text-center">
                 <div className="w-16 h-16 mx-auto bg-white rounded-2xl flex items-center justify-center shadow-md mb-6 text-brand-accent">
                   <Heart className="w-8 h-8" />
                 </div>
-                <h3 className="text-xl font-bold mb-4 text-brand-dark">{t.about.passion.title}</h3>
+                <h3 className="text-xl font-normal mb-4 text-brand-dark font-display">{t.about.passion.title}</h3>
                 <p className="text-zinc-700 font-normal">{t.about.passion.desc}</p>
               </div>
               <div className="text-center">
                 <div className="w-16 h-16 mx-auto bg-white rounded-2xl flex items-center justify-center shadow-md mb-6 text-brand-accent">
                   <Wrench className="w-8 h-8" />
                 </div>
-                <h3 className="text-xl font-bold mb-4 text-brand-dark">{t.about.quality.title}</h3>
+                <h3 className="text-xl font-normal mb-4 text-brand-dark font-display">{t.about.quality.title}</h3>
                 <p className="text-zinc-700 font-normal">{t.about.quality.desc}</p>
               </div>
            </div>

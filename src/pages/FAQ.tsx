@@ -12,7 +12,7 @@ const FaqItem = ({ question, answer }: { question: string, answer: string }) => 
         className="w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none"
         onClick={() => setIsOpen(!isOpen)}
       >
-        <span className="font-bold text-brand-dark lg:text-lg">{question}</span>
+        <span className="font-normal text-brand-dark lg:text-lg font-display">{question}</span>
         <ChevronDown className={`w-5 h-5 text-brand-accent transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`} />
       </button>
       <div 
@@ -38,7 +38,7 @@ export const FAQ = () => {
         <div className="max-w-3xl mx-auto px-6">
           <div className="text-center mb-16">
             <span className="text-brand-accent font-bold tracking-widest uppercase text-xs mb-4 block">Häufige Fragen</span>
-            <h1 className="text-4xl lg:text-5xl font-bold tracking-tight text-brand-dark mb-4">
+            <h1 className="text-5xl lg:text-7xl font-normal tracking-wide text-brand-dark mb-4 font-heading uppercase leading-[1]">
               Gut zu wissen.
             </h1>
             <p className="text-zinc-600 font-normal text-lg">
