@@ -71,7 +71,7 @@ export const SEO = ({
           ],
           "sameAs": [
             "https://www.facebook.com/diereparaturgarage",
-            "https://www.instagram.com/diereparaturgarage"
+            "https://www.instagram.com/die_reparatur_garage/"
           ]
         })}
       </script>

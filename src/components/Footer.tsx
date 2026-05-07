@@ -16,7 +16,7 @@ export const Footer = () => {
               Deine inhabergeführte Kfz-Meisterwerkstatt in Enkenbach-Alsenborn. Ehrlich, direkt, kompromisslos in der Qualität.
             </p>
             <div className="flex gap-4">
-              <a href="https://www.instagram.com/diereparaturgarage" target="_blank" rel="noopener noreferrer" className="p-2 border border-zinc-700 rounded-lg hover:border-brand-accent hover:text-brand-accent transition-colors">
+              <a href="https://www.instagram.com/die_reparatur_garage/" target="_blank" rel="noopener noreferrer" className="p-2 border border-zinc-700 rounded-lg hover:border-brand-accent hover:text-brand-accent transition-colors">
                 <Instagram className="w-5 h-5" />
               </a>
               <a href="https://www.facebook.com/diereparaturgarage" target="_blank" rel="noopener noreferrer" className="p-2 border border-zinc-700 rounded-lg hover:border-brand-accent hover:text-brand-accent transition-colors">
