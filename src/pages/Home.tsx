@@ -26,29 +26,19 @@ const FeatureCard = ({ icon: Icon, title, desc }: { icon: any, title: string, de
 
 const heroImages = [
   {
-    url: "https://images.unsplash.com/photo-1517524008410-b44c6059b850?auto=format&fit=crop&q=80&w=800",
+    url: "/images/hero-3.png",
     label: "Meisterqualität",
-    desc: "Geprüftes Handwerk nach Herstellervorgaben."
+    desc: "Modernste Technik & jahrelange Erfahrung"
   },
   {
-    url: "https://images.unsplash.com/photo-1530906358829-e84b2769270f?auto=format&fit=crop&q=80&w=800",
-    label: "Moderne Technik",
-    desc: "Präzise Diagnose für alle Fahrzeugmarken."
+    url: "/images/hero-1.png",
+    label: "Präzision",
+    desc: "Exakte Diagnose für maximale Sicherheit"
   },
   {
-    url: "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&q=80&w=800",
-    label: "Full Service",
-    desc: "Von der Inspektion bis zur US-Umrüstung."
-  },
-  {
-    url: "https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&q=80&w=800",
-    label: "Zweirad-Service",
-    desc: "Professionelle Reparatur und Wartung für Motorräder."
-  },
-  {
-    url: "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&q=80&w=800",
-    label: "US-Car Spezialist",
-    desc: "Dein Partner für amerikanische Fahrzeugträume."
+    url: "/images/hero-2.png",
+    label: "Handwerk",
+    desc: "Sorgfalt bei jedem Handgriff"
   }
 ];
 
@@ -78,7 +68,7 @@ export const Home = () => {
       <section className="relative overflow-hidden bg-brand-dark text-white pt-12 pb-32 lg:py-40 min-h-[80vh] flex items-center">
         <div className="absolute inset-0 z-0">
           <img 
-            src="/hero_garage_background_1778156355035.png" 
+            src="/images/hero-3.png" 
             alt="Die Reparatur Garage" 
             className="w-full h-full object-cover opacity-30"
           />
@@ -161,9 +151,7 @@ export const Home = () => {
                     
                     <div className="absolute inset-0 bg-linear-to-t from-brand-dark/90 via-brand-dark/30 to-transparent p-10 flex flex-col justify-end">
                        <div className="absolute top-8 left-8 z-20">
-                         <span className="px-3 py-1.5 bg-brand-accent/90 text-white text-[10px] font-bold uppercase rounded-lg backdrop-blur-md border border-white/20">
-                           {language === 'de' ? 'Platzhalter' : 'Placeholder'}: Hero-Slide {currentImage + 1} ({heroImages[currentImage].label})
-                         </span>
+                         {/* Badge removed for cleaner look */}
                        </div>
                        <motion.div 
                          initial={{ y: 20, opacity: 0 }}
