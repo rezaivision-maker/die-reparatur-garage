@@ -31,7 +31,7 @@ export const Navigation = () => {
             <span className="text-white font-black text-xl sm:text-2xl -rotate-45">R</span>
           </div>
           <div className="flex flex-col leading-none">
-            <h1 className="text-base sm:text-xl md:text-2xl font-black italic tracking-tighter text-white uppercase truncate max-w-[150px] sm:max-w-none">
+            <h1 className="text-xl sm:text-2xl md:text-3xl font-normal tracking-wide text-white uppercase truncate max-w-[150px] sm:max-w-none font-heading">
               REPARATUR GARAGE
             </h1>
             <p className="text-[8px] sm:text-[10px] uppercase tracking-[0.1em] text-brand-accent font-bold mt-1">
@@ -41,7 +41,7 @@ export const Navigation = () => {
         </Link>
         
         {/* CENTER: Desktop Navigation (Hidden on Mobile) */}
-        <div className="hidden lg:flex items-center gap-6 xl:gap-8 text-[11px] xl:text-[12px] font-bold uppercase tracking-widest text-zinc-300">
+        <div className="hidden lg:flex items-center gap-6 xl:gap-8 text-base xl:text-lg font-normal uppercase tracking-wider text-zinc-300 font-heading">
           {links.map((link) => (
             <Link 
               key={link.path} 
@@ -85,9 +85,9 @@ export const Navigation = () => {
             </a>
             <Link 
               to="/kontakt"
-              className="px-4 py-2 bg-brand-accent text-white font-black uppercase text-[10px] skew-x-[-10deg] hover:bg-white hover:text-brand-dark transition-all transform"
+              className="px-4 py-2 bg-brand-accent text-white font-normal uppercase text-sm skew-x-[-10deg] hover:bg-white hover:text-brand-dark transition-all transform font-heading"
             >
-              <div className="skew-x-[10deg]">{t.nav.cta}</div>
+              <div className="skew-x-[10deg] tracking-wider">{t.nav.cta}</div>
             </Link>
           </div>
 
@@ -133,7 +133,7 @@ export const Navigation = () => {
                     <Link 
                       to={link.path} 
                       onClick={() => setIsOpen(false)}
-                      className={`text-3xl font-black uppercase tracking-tighter transition-colors ${location.pathname === link.path ? 'text-brand-accent' : 'text-white hover:text-brand-accent'}`}
+                      className={`text-5xl font-normal uppercase tracking-wide transition-colors font-heading ${location.pathname === link.path ? 'text-brand-accent' : 'text-white hover:text-brand-accent'}`}
                     >
                       {link.name}
                     </Link>
@@ -152,7 +152,7 @@ export const Navigation = () => {
                 <Link 
                   to="/kontakt"
                   onClick={() => setIsOpen(false)}
-                  className="block w-full py-5 bg-brand-accent text-white font-black uppercase text-center rounded-xl shadow-lg hover:bg-white hover:text-brand-dark transition-all"
+                  className="block w-full py-5 bg-brand-accent text-white font-normal uppercase text-center rounded-xl shadow-lg hover:bg-white hover:text-brand-dark transition-all font-heading text-2xl tracking-wider"
                 >
                   {t.nav.cta}
                 </Link>

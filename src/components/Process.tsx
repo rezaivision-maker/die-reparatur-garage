@@ -16,7 +16,7 @@ export const Process = () => {
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="text-center mb-16">
           <span className="text-brand-accent font-bold tracking-widest uppercase text-xs mb-4 block">{t.process.tag}</span>
-          <h2 className="text-4xl font-bold mb-4">{t.process.title}</h2>
+          <h2 className="text-4xl lg:text-5xl font-normal mb-4 font-display">{t.process.title}</h2>
           <p className="text-zinc-400 max-w-2xl mx-auto">
             {t.process.subtitle}
           </p>
@@ -37,13 +37,13 @@ export const Process = () => {
                 transition={{ delay: index * 0.2 }}
                 className="bg-zinc-800/50 backdrop-blur-md border border-white/10 p-8 rounded-2xl relative z-10 hover:border-brand-accent/50 transition-colors"
               >
-                <div className="absolute -top-4 -left-4 w-12 h-12 bg-brand-accent text-white font-black text-xl flex items-center justify-center rounded-xl shadow-lg transform rotate-[-5deg]">
+                <div className="absolute -top-4 -left-4 w-12 h-12 bg-brand-accent text-white font-black text-xl flex items-center justify-center rounded-xl shadow-lg transform rotate-[-5deg] font-heading">
                   0{index + 1}
                 </div>
                 <div className="w-14 h-14 bg-white/5 rounded-full flex items-center justify-center mb-6 mt-4">
                   {Icon && <Icon className="w-6 h-6 text-brand-accent" />}
                 </div>
-                <h3 className="text-xl font-bold mb-3">{step.title}</h3>
+                <h3 className="text-xl font-normal mb-3 font-display">{step.title}</h3>
                 <p className="text-zinc-400 font-light leading-relaxed">
                   {step.desc}
                 </p>

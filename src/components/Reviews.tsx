@@ -45,7 +45,7 @@ export const Reviews = () => {
             <Star className="w-4 h-4 text-brand-accent fill-brand-accent" />
             <span className="text-xs font-bold uppercase tracking-widest text-brand-dark">{t.reviews.tag}</span>
           </motion.div>
-          <h2 className="text-4xl font-bold text-brand-dark mb-4">{t.reviews.title}</h2>
+          <h2 className="text-4xl font-normal text-brand-dark mb-4 font-display">{t.reviews.title}</h2>
           <p className="text-zinc-600 max-w-2xl mx-auto">
             {t.reviews.subtitle}
           </p>

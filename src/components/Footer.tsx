@@ -12,7 +12,7 @@ export const Footer = () => {
           {/* Brand Info */}
           <div className="space-y-6">
             <div className="flex flex-col">
-              <h3 className="text-2xl font-black italic tracking-tighter leading-none text-white uppercase">DIE REPARATUR GARAGE</h3>
+              <h3 className="text-3xl font-normal tracking-wide leading-none text-white uppercase font-heading">DIE REPARATUR GARAGE</h3>
               <p className="text-[10px] uppercase tracking-[0.2em] text-brand-accent font-bold mt-2">Inh. Wishnu Pranatyo</p>
             </div>
             <p className="leading-relaxed opacity-80">
