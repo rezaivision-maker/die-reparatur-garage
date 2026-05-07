@@ -28,7 +28,7 @@ export const translations = {
         { label: "Meisterqualität", desc: "Modernste Technik & jahrelange Erfahrung" },
         { label: "Präzision", desc: "Exakte Diagnose für maximale Sicherheit" },
         { label: "Handwerk", desc: "Sorgfalt bei jedem Handgriff" },
-        { label: "Zweirad-Service", desc: "Professionelle Wartung & Reparatur" },
+        { label: "Motorradwerkstatt", desc: "Professionelle Wartung & Service" },
         { label: "US-Car Spezialist", desc: "Dein Partner für amerikanische Träume" },
         { label: "Unser Team", desc: "Echte Leidenschaft für dein Fahrzeug" }
       ]
@@ -86,7 +86,7 @@ export const translations = {
           desc: 'Wir machen dein Auto TÜV-fertig und führen notwendige Vorab-Checks durch. Kompetente Fahrwerk-Einstellung.'
         },
         {
-          title: 'Zweirad-Service & Reparatur',
+          title: 'Motorradwerkstatt & Service',
           desc: 'Vom Reifenwechsel bis zur Vergaser-Synchronisation – Motorräder sind bei uns in besten Händen.'
         }
       ],
@@ -188,7 +188,7 @@ export const translations = {
         { label: "Master Quality", desc: "State-of-the-art tech & years of experience" },
         { label: "Precision", desc: "Exact diagnostics for maximum safety" },
         { label: "Craftsmanship", desc: "Care in every single movement" },
-        { label: "Motorcycle Service", desc: "Professional maintenance & repair" },
+        { label: "Motorcycle Workshop", desc: "Professional maintenance & service" },
         { label: "US-Car Specialist", desc: "Your partner for American dreams" },
         { label: "Our Team", desc: "Real passion for your vehicle" }
       ]
@@ -246,7 +246,7 @@ export const translations = {
           desc: 'We get your car ready for inspection (TÜV) and perform necessary pre-checks. Competent suspension tuning.'
         },
         {
-          title: 'Motorcycle Service & Repair',
+          title: 'Motorcycle Workshop & Service',
           desc: 'From tire changes to carburetor synchronization – motorcycles are in best hands with us.'
         }
       ],
