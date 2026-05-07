@@ -77,7 +77,7 @@ export const Reviews = () => {
 
         <div className="mt-16 text-center">
           <a 
-            href="https://www.google.com/maps/place/Die+Reparatur+Garage/@49.4851221,7.8967406,17z/data=!4m8!3m7!1s0x4796035069908639:0x85437140f7d0c354!8m2!3d49.4851221!4d7.8993155!9m1!1b1!16s%2Fg%2F11f_6p_8p1?entry=ttu" 
+            href="https://www.google.com/maps/place/Die+Reparatur+Garage/@49.4923735,7.8946645,17z" 
             target="_blank" 
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 text-brand-accent font-bold hover:underline"

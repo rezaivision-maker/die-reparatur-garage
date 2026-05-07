@@ -250,29 +250,14 @@ export const Home = () => {
            </div>
            <div className="relative">
               <div className="grid grid-cols-2 gap-4">
-                 <div className="col-span-2 rounded-2xl w-full h-72 overflow-hidden bg-zinc-100 border border-zinc-200 relative group flex items-center justify-center">
-                    {/* PLACEHOLDER: WERKSTATT AUSSENANSICHT */}
-                    <div className="absolute inset-0 flex flex-col items-center justify-center text-zinc-400 z-10 p-6 text-center group-hover:bg-zinc-800 group-hover:text-white transition-colors">
-                      <ImageIcon className="w-8 h-8 mb-2 opacity-50" />
-                      <span className="text-xs font-bold uppercase tracking-wider">Werkstatt Außenansicht</span>
-                    </div>
-                    <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&q=80&w=1200" alt="Werkstatt Außen" className="absolute inset-0 w-full h-full object-cover opacity-30 group-hover:opacity-10 transition-opacity" />
+                 <div className="col-span-2 rounded-2xl w-full h-72 overflow-hidden bg-zinc-100 border border-zinc-200 relative group flex items-center justify-center shadow-md">
+                    <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&q=80&w=1200" alt="Werkstatt Außenansicht" className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
                  </div>
-                 <div className="rounded-2xl w-full h-56 overflow-hidden bg-zinc-100 border border-zinc-200 relative group flex items-center justify-center">
-                    {/* PLACEHOLDER: WERKSTATT INNENANSICHT */}
-                    <div className="absolute inset-0 flex flex-col items-center justify-center text-zinc-400 z-10 p-6 text-center group-hover:bg-zinc-800 group-hover:text-white transition-colors">
-                      <ImageIcon className="w-6 h-6 mb-2 opacity-50" />
-                      <span className="text-xs font-bold uppercase tracking-wider text-[10px]">Innenansicht</span>
-                    </div>
-                    <img src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&q=80&w=600" alt="Werkstatt Innen" className="absolute inset-0 w-full h-full object-cover opacity-30 group-hover:opacity-10 transition-opacity" />
+                 <div className="rounded-2xl w-full h-56 overflow-hidden bg-zinc-100 border border-zinc-200 relative group flex items-center justify-center shadow-md">
+                    <img src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&q=80&w=600" alt="Werkstatt Innenansicht" className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
                  </div>
-                 <div className="rounded-2xl w-full h-56 overflow-hidden bg-zinc-100 border border-zinc-200 relative group flex items-center justify-center">
-                    {/* PLACEHOLDER: TEAM / WISHNU */}
-                    <div className="absolute inset-0 flex flex-col items-center justify-center text-zinc-400 z-10 p-6 text-center group-hover:bg-zinc-800 group-hover:text-white transition-colors">
-                      <ImageIcon className="w-6 h-6 mb-2 opacity-50" />
-                      <span className="text-xs font-bold uppercase tracking-wider text-[10px]">Der Meister bei der Arbeit</span>
-                    </div>
-                    <img src="https://images.unsplash.com/photo-1544641113-f9d22fa97950?auto=format&fit=crop&q=80&w=600" alt="Team" className="absolute inset-0 w-full h-full object-cover opacity-30 group-hover:opacity-10 transition-opacity" />
+                 <div className="rounded-2xl w-full h-56 overflow-hidden bg-zinc-100 border border-zinc-200 relative group flex items-center justify-center shadow-md">
+                    <img src="https://images.unsplash.com/photo-1544641113-f9d22fa97950?auto=format&fit=crop&q=80&w=600" alt="Der Meister bei der Arbeit" className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
                  </div>
               </div>
            </div>

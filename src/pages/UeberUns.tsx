@@ -27,15 +27,11 @@ export const UeberUns = () => {
             </div>
           </div>
           <div className="relative">
-             <div className="aspect-square md:aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl bg-zinc-100 flex items-center justify-center">
-                {/* PLACEHOLDER FÜR TEAMFOTO / WISHNU */}
-                <div className="absolute inset-0 flex flex-col items-center justify-center text-zinc-400 z-10 p-6 text-center hover:bg-zinc-800 hover:text-white transition-colors">
-                   <span className="text-xs font-bold uppercase tracking-wider mb-2">Hier gehört ein starkes Teamfoto hin</span>
-                </div>
+             <div className="aspect-square md:aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl bg-zinc-100 relative group">
                 <img 
                   src="https://images.unsplash.com/photo-1504222490345-c075b6008014?auto=format&fit=crop&q=80&w=1200" 
-                  alt="Werkstatt Team" 
-                  className="w-full h-full object-cover opacity-50 hover:opacity-10 transition-opacity"
+                  alt="Wishnu Pranatyo & Team" 
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
              </div>
              <div className="absolute -bottom-8 -left-8 bg-brand-dark text-white p-8 rounded-2xl shadow-xl max-w-sm hidden md:block z-20">
