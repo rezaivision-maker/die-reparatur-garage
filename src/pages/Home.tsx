@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { ArrowRight, Settings, ShieldCheck, Wrench, Gauge, Car, Zap, Image as ImageIcon } from 'lucide-react';
+import { ArrowRight, Settings, ShieldCheck, Wrench, Gauge, Car, Zap, Image as ImageIcon, ChevronLeft, ChevronRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { SEO } from '../components/SEO';
 import { Reviews } from '../components/Reviews';
@@ -44,9 +44,12 @@ export const Home = () => {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentImage((prev) => (prev + 1) % heroImages.length);
-    }, 5000);
+    }, 6000);
     return () => clearInterval(timer);
-  }, []);
+  }, [currentImage]); // Restart timer on manual change
+
+  const nextSlide = () => setCurrentImage((prev) => (prev + 1) % heroImages.length);
+  const prevSlide = () => setCurrentImage((prev) => (prev - 1 + heroImages.length) % heroImages.length);
 
   return (
     <>
@@ -109,7 +112,7 @@ export const Home = () => {
              transition={{ duration: 1, delay: 0.2 }}
              className="hidden lg:block relative"
           >
-             <div className="aspect-[4/5] rounded-[2rem] overflow-hidden border-8 border-brand-dark shadow-2xl relative z-10 bg-zinc-800">
+             <div className="aspect-[4/5] rounded-[2rem] overflow-hidden border-8 border-brand-dark shadow-2xl relative z-10 bg-zinc-800 group">
                 <AnimatePresence mode="wait">
                   <motion.div
                     key={currentImage}
@@ -146,6 +149,33 @@ export const Home = () => {
                     </div>
                   </motion.div>
                 </AnimatePresence>
+
+                {/* Navigation Arrows */}
+                <button 
+                  onClick={prevSlide}
+                  className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/10 hover:bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center text-white transition-all opacity-0 group-hover:opacity-100 z-20"
+                >
+                  <ChevronLeft className="w-6 h-6" />
+                </button>
+                <button 
+                  onClick={nextSlide}
+                  className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/10 hover:bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center text-white transition-all opacity-0 group-hover:opacity-100 z-20"
+                >
+                  <ChevronRight className="w-6 h-6" />
+                </button>
+
+                {/* Navigation Dots */}
+                <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2 z-20">
+                  {heroImages.map((_, i) => (
+                    <button
+                      key={i}
+                      onClick={() => setCurrentImage(i)}
+                      className={`w-2 h-2 rounded-full transition-all ${
+                        i === currentImage ? 'bg-brand-accent w-6' : 'bg-white/40 hover:bg-white/60'
+                      }`}
+                    />
+                  ))}
+                </div>
              </div>
              {/* Decorative element */}
              <div className="absolute -bottom-10 -left-10 w-48 h-48 bg-brand-accent/20 rounded-full blur-3xl z-0" />
