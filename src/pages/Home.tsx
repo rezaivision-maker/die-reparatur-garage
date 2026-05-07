@@ -140,19 +140,24 @@ export const Home = () => {
              className="hidden lg:block relative"
           >
              <div className="aspect-[4/5] rounded-[2rem] overflow-hidden border-8 border-brand-dark shadow-2xl relative z-10 bg-zinc-800 group">
-                <AnimatePresence mode="wait">
+                <AnimatePresence mode="popLayout" initial={false}>
                   <motion.div
                     key={currentImage}
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                    transition={{ duration: 1 }}
+                    initial={{ x: '100%', opacity: 0 }}
+                    animate={{ x: 0, opacity: 1 }}
+                    exit={{ x: '-100%', opacity: 0 }}
+                    transition={{ 
+                      type: "spring",
+                      stiffness: 300,
+                      damping: 30,
+                      opacity: { duration: 0.5 }
+                    }}
                     className="absolute inset-0"
                   >
                     <img 
                       src={heroImages[currentImage].url} 
                       alt={t.hero.slides[currentImage].label} 
-                      className="w-full h-full object-cover scale-105"
+                      className="w-full h-full object-cover"
                     />
                     
                     <div className="absolute inset-0 bg-linear-to-t from-brand-dark/90 via-brand-dark/30 to-transparent p-10 flex flex-col justify-end">
