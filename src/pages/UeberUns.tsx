@@ -26,18 +26,39 @@ export const UeberUns = () => {
             </div>
           </div>
           <div className="relative">
-             <div className="aspect-square md:aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl bg-zinc-100 relative group">
+            <div className="grid grid-cols-12 gap-4">
+              {/* Main Team Photo */}
+              <div className="col-span-12 md:col-span-10 rounded-3xl overflow-hidden shadow-2xl relative group">
                 <img 
-                  src="https://images.unsplash.com/photo-1504222490345-c075b6008014?auto=format&fit=crop&q=80&w=1200" 
-                  alt="Wishnu Pranatyo & Team" 
-                  loading="lazy"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                  src="/images/team.png" 
+                  alt="Das Team der Reparaturgarage" 
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 aspect-[16/10]"
                 />
-             </div>
-             <div className="absolute -bottom-8 -left-8 bg-brand-dark text-white p-8 rounded-2xl shadow-xl max-w-sm hidden md:block z-20">
-               <p className="font-bold text-xl mb-2">{t.about.badgeTitle}</p>
-               <p className="text-sm font-light text-zinc-300">{t.about.badgeDesc}</p>
-             </div>
+                <div className="absolute top-4 left-4 z-20">
+                  <span className="px-3 py-1 bg-brand-accent/90 text-white text-[10px] font-bold uppercase rounded backdrop-blur-md">
+                    {language === 'de' ? 'Das Team' : 'The Team'}
+                  </span>
+                </div>
+              </div>
+
+              {/* Boss Portrait (Staggered) */}
+              <div className="col-span-8 md:col-span-6 -mt-12 md:-mt-24 ml-auto rounded-2xl overflow-hidden shadow-2xl border-4 border-white relative group z-30">
+                <img 
+                  src="/images/chef.png" 
+                  alt="Wishnu Pranatyo - Inhaber & KFZ-Meister" 
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 aspect-square"
+                />
+                <div className="absolute bottom-0 left-0 right-0 p-4 bg-brand-dark/80 backdrop-blur-md text-white">
+                  <p className="font-bold text-sm leading-tight">Wishnu Pranatyo</p>
+                  <p className="text-[10px] text-brand-accent font-bold uppercase tracking-tighter">
+                    {language === 'de' ? 'Inhaber & KFZ-Meister' : 'Owner & Master Mechanic'}
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Decorative background element */}
+            <div className="absolute -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-brand-accent/5 rounded-full blur-3xl" />
           </div>
         </div>
       </div>
