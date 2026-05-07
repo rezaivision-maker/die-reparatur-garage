@@ -4,25 +4,29 @@ import { Camera } from 'lucide-react';
 const images = [
   {
     url: "https://images.unsplash.com/photo-1610647752706-3bb12232b3ab?auto=format&fit=crop&q=80&w=800",
-    title: "US-Car Spezialist",
+    title: "US-Car & Spezial-Umbauten",
+    desc: "Hier: Highlight-Fahrzeug in der Halle",
     colSpan: "col-span-1 md:col-span-2",
     rowSpan: "row-span-2"
   },
   {
     url: "https://images.unsplash.com/photo-1493238792000-8113da705763?auto=format&fit=crop&q=80&w=800",
-    title: "Detailarbeit",
+    title: "Detailarbeit & Präzision",
+    desc: "Hier: Nahaufnahme Werkzeug/Motor",
     colSpan: "col-span-1",
     rowSpan: "row-span-1"
   },
   {
     url: "https://images.unsplash.com/photo-1530906358829-e84b2769270f?auto=format&fit=crop&q=80&w=800",
-    title: "Moderne Diagnose",
+    title: "Moderne Fehlerdiagnose",
+    desc: "Hier: Laptop/Tablet am Fahrzeug",
     colSpan: "col-span-1",
     rowSpan: "row-span-1"
   },
   {
     url: "https://images.unsplash.com/photo-1625047509248-ec889cbff17f?auto=format&fit=crop&q=80&w=800",
-    title: "Reifenservice",
+    title: "Reifenservice & Profi-Equipment",
+    desc: "Hier: Detailaufnahme modernster Maschinen",
     colSpan: "col-span-1 md:col-span-2",
     rowSpan: "row-span-1"
   }
@@ -63,6 +67,14 @@ export const ImageGallery = () => {
                 className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300" />
+              
+              {/* Info Badge for Client */}
+              <div className="absolute top-4 left-4 z-20">
+                <span className="px-2 py-1 bg-brand-accent/90 text-white text-[10px] font-bold uppercase rounded backdrop-blur-sm">
+                  Platzhalter: {img.desc}
+                </span>
+              </div>
+
               <div className="absolute bottom-0 left-0 p-6 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
                 <span className="text-white font-bold tracking-wide">{img.title}</span>
                 <div className="w-8 h-1 bg-brand-accent mt-3 transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
