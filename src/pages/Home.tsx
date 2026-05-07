@@ -29,7 +29,8 @@ const heroImages = [
   { url: "/images/hero-1.png" },
   { url: "/images/hero-2.png" },
   { url: "/images/hero-4.png" },
-  { url: "/images/hero-5.png" }
+  { url: "/images/hero-5.png" },
+  { url: "/images/team.png" }
 ];
 
 export const Home = () => {

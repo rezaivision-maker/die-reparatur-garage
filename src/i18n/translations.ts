@@ -29,7 +29,8 @@ export const translations = {
         { label: "Präzision", desc: "Exakte Diagnose für maximale Sicherheit" },
         { label: "Handwerk", desc: "Sorgfalt bei jedem Handgriff" },
         { label: "Zweirad-Service", desc: "Professionelle Wartung & Reparatur" },
-        { label: "US-Car Spezialist", desc: "Dein Partner für amerikanische Träume" }
+        { label: "US-Car Spezialist", desc: "Dein Partner für amerikanische Träume" },
+        { label: "Unser Team", desc: "Echte Leidenschaft für dein Fahrzeug" }
       ]
     },
     garage: {
@@ -188,7 +189,8 @@ export const translations = {
         { label: "Precision", desc: "Exact diagnostics for maximum safety" },
         { label: "Craftsmanship", desc: "Care in every single movement" },
         { label: "Motorcycle Service", desc: "Professional maintenance & repair" },
-        { label: "US-Car Specialist", desc: "Your partner for American dreams" }
+        { label: "US-Car Specialist", desc: "Your partner for American dreams" },
+        { label: "Our Team", desc: "Real passion for your vehicle" }
       ]
     },
     garage: {
