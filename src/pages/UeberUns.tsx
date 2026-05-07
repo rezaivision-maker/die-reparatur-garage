@@ -4,7 +4,7 @@ import { ImageGallery } from '../components/ImageGallery';
 import { useTranslation } from '../i18n/LanguageContext';
 
 export const UeberUns = () => {
-  const { t } = useTranslation();
+  const { t, language } = useTranslation();
   return (
     <>
       <SEO 
