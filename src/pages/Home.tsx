@@ -25,17 +25,17 @@ const FeatureCard = ({ icon: Icon, title, desc }: { icon: any, title: string, de
 
 const heroImages = [
   {
-    url: "https://images.unsplash.com/photo-1620959419133-c2152dc3625f?auto=format&fit=crop&q=80&w=800",
+    url: "https://images.unsplash.com/photo-1517524008410-b44c6059b850?auto=format&fit=crop&q=80&w=800",
     label: "Meisterqualität",
     desc: "Geprüftes Handwerk nach Herstellervorgaben."
   },
   {
-    url: "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&q=80&w=800",
-    label: "Modernste Technik",
+    url: "https://images.unsplash.com/photo-1530906358829-e84b2769270f?auto=format&fit=crop&q=80&w=800",
+    label: "Moderne Technik",
     desc: "Präzise Diagnose für alle Fahrzeugmarken."
   },
   {
-    url: "https://images.unsplash.com/photo-1619642751034-765dfdf7c162?auto=format&fit=crop&q=80&w=800",
+    url: "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&q=80&w=800",
     label: "Full Service",
     desc: "Von der Inspektion bis zur US-Umrüstung."
   },
