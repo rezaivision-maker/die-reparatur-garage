@@ -1,4 +1,5 @@
-import { motion } from 'motion/react';
+import { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'motion/react';
 import { ArrowRight, Settings, ShieldCheck, Wrench, Gauge, Car, Zap, Image as ImageIcon } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { SEO } from '../components/SEO';
@@ -19,7 +20,34 @@ const FeatureCard = ({ icon: Icon, title, desc }: { icon: any, title: string, de
   </div>
 );
 
+const heroImages = [
+  {
+    url: "https://images.unsplash.com/photo-1620959419133-c2152dc3625f?auto=format&fit=crop&q=80&w=800",
+    label: "Meisterqualität",
+    desc: "Geprüftes Handwerk nach Herstellervorgaben."
+  },
+  {
+    url: "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&q=80&w=800",
+    label: "Modernste Technik",
+    desc: "Präzise Diagnose für alle Fahrzeugmarken."
+  },
+  {
+    url: "https://images.unsplash.com/photo-1619642751034-765dfdf7c162?auto=format&fit=crop&q=80&w=800",
+    label: "Full Service",
+    desc: "Von der Inspektion bis zur US-Umrüstung."
+  }
+];
+
 export const Home = () => {
+  const [currentImage, setCurrentImage] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentImage((prev) => (prev + 1) % heroImages.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, []);
+
   return (
     <>
       <SEO 
@@ -81,24 +109,43 @@ export const Home = () => {
              transition={{ duration: 1, delay: 0.2 }}
              className="hidden lg:block relative"
           >
-             <div className="aspect-[4/5] rounded-[2rem] overflow-hidden border-8 border-brand-dark shadow-2xl relative z-10 bg-zinc-800 flex items-center justify-center">
-                {/* 
-                  PLACEHOLDER FÜR WISHNU PRANATYO / WERKSTATT BILD 
-                  Ersetze den src-Link mit einem professionellen Bild des Meisters.
-                */}
-                <img 
-                  src="https://images.unsplash.com/photo-1620959419133-c2152dc3625f?auto=format&fit=crop&q=80&w=800" 
-                  alt="Mechaniker bei der Arbeit in der KFZ Werkstatt" 
-                  className="w-full h-full object-cover scale-105 hover:scale-110 transition-transform duration-1000"
-                />
-                
-                <div className="absolute inset-0 bg-linear-to-t from-brand-dark/90 via-brand-dark/30 to-transparent p-10 flex flex-col justify-end">
-                   <div className="flex items-center gap-3 mb-2">
-                     <ShieldCheck className="w-6 h-6 text-brand-accent" />
-                     <span className="text-sm font-bold uppercase tracking-widest">Meisterqualität</span>
-                   </div>
-                   <p className="font-light text-zinc-300">Geprüftes Handwerk nach Herstellervorgaben.</p>
-                </div>
+             <div className="aspect-[4/5] rounded-[2rem] overflow-hidden border-8 border-brand-dark shadow-2xl relative z-10 bg-zinc-800">
+                <AnimatePresence mode="wait">
+                  <motion.div
+                    key={currentImage}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 1 }}
+                    className="absolute inset-0"
+                  >
+                    <img 
+                      src={heroImages[currentImage].url} 
+                      alt={heroImages[currentImage].label} 
+                      className="w-full h-full object-cover scale-105"
+                    />
+                    
+                    <div className="absolute inset-0 bg-linear-to-t from-brand-dark/90 via-brand-dark/30 to-transparent p-10 flex flex-col justify-end">
+                       <motion.div 
+                         initial={{ y: 20, opacity: 0 }}
+                         animate={{ y: 0, opacity: 1 }}
+                         transition={{ delay: 0.5 }}
+                         className="flex items-center gap-3 mb-2"
+                       >
+                         <ShieldCheck className="w-6 h-6 text-brand-accent" />
+                         <span className="text-sm font-bold uppercase tracking-widest">{heroImages[currentImage].label}</span>
+                       </motion.div>
+                       <motion.p 
+                         initial={{ y: 20, opacity: 0 }}
+                         animate={{ y: 0, opacity: 1 }}
+                         transition={{ delay: 0.7 }}
+                         className="font-light text-zinc-300"
+                       >
+                         {heroImages[currentImage].desc}
+                       </motion.p>
+                    </div>
+                  </motion.div>
+                </AnimatePresence>
              </div>
              {/* Decorative element */}
              <div className="absolute -bottom-10 -left-10 w-48 h-48 bg-brand-accent/20 rounded-full blur-3xl z-0" />
